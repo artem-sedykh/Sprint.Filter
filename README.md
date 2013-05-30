@@ -18,14 +18,14 @@ public class UserFilter : FilterCollection
 {
 	public UserFilter(string gridKey, IDirectionActivityService directionActivityService, IMvcPrincipal user)
     {
-        Add("DirectionActivity",new ValueTypeFilter&lt;DirectionActivity, int>()).For(c => c.Id)
-            .Conditions(conditions => conditions["isin"] = new ValueTypeIsInCondition&lt;int>())
+        Add("DirectionActivity",new ValueTypeFilter<DirectionActivity, int>()).For(c => c.Id)
+            .Conditions(conditions => conditions["isin"] = new ValueTypeIsInCondition<int>())
             .SetTitle("Direction:")
             .SetTemplate("IsInFastFilter")
             .SetDictionary(() => directionActivityService.GetTreeSource(user))
             .ConditionBuilder((expression, conditionKey) => 
                 expression != null
-				?Linq.Expr&lt;User, bool>(u => u.DirectionActivities.AsQueryable().Any(expression))
+				?Linq.Expr<User, bool>(u => u.DirectionActivities.AsQueryable().Any(expression))
                 : null);
 
         Action = "Grid";
@@ -50,7 +50,7 @@ public ActionResult Grid(ActionGridOptions options, IMvcPrincipal user)
 
     var model = new DealerGridModel(DealerGridKey);
 
-    return View(new ActionGridView&lt;User>(model, query).Init(options));
+    return View(new ActionGridView<User>(model, query).Init(options));
 }
 
 public ActionResult Filter(ActionGridOptions options, IMvcPrincipal user)
