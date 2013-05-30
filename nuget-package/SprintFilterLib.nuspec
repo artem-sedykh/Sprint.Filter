@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Sprint.Filter</id>
+        <version>2.0.0.1</version>
+        <authors>Artem Sedykh</authors>
+        <owners>Artem Sedykh</owners>        
+        <projectUrl>https://github.com/artem-sedykh/Sprint.Filter</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>        
+        <description>Filtering data in ASP.NET MVC</description>
+        <language>en-US</language>
+        <tags>ASP.NET MVC, Filter, Sprint</tags>
+      <dependencies>
+        <dependency id="LinqKit" version="1.0" />
+      </dependencies>
+    </metadata>	
+    <files>
+        <file src="..\bin\Release\Sprint.Filter.dll" target="lib\net40-full" />            
+    </files>
+</package>

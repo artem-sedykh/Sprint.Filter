@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>LinqKit</id>
+    <version>1.0</version>
+    <title>LinqKit</title>
+    <authors>http://www.albahari.com/nutshell/linqkit.aspx</authors>
+    <owners>http://www.albahari.com/nutshell/linqkit.aspx</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>LINQKit is a free set of extensions for LINQ to SQL and Entity Framework power users.</description>
+    <summary>LINQKit is a free set of extensions for LINQ to SQL and Entity Framework power users.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+  </metadata>
+</package>

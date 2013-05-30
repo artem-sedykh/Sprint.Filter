@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0871E42-2723-44F7-A1D0-15E76DC6DEFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sprint</RootNamespace>
+    <AssemblyName>Sprint.Filter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\LinqKit.1.0\lib\35\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Filter\FilterCollection.cs" />
+    <Compile Include="Filter\FilterOptions.cs" />
+    <Compile Include="Filter\FilterType.cs" />
+    <Compile Include="Filter\FilterValue.cs" />
+    <Compile Include="Filter\FilterValueJavaScriptConverter.cs" />
+    <Compile Include="Filter\IFilter.cs" />
+    <Compile Include="Filter\IFilterCollection.cs" />
+    <Compile Include="Filter\IFilterCollectionView.cs" />
+    <Compile Include="Filter\IFilterOptions.cs" />
+    <Compile Include="Filter\IFilterValue.cs" />
+    <Compile Include="Filter\IFilterView.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ContainsCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\EndsWithCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\IsNotNullOrEmptyCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\IsNullOrEmptyCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\NotContainsCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeEqualCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeIsInCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeIsNotInCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeIsNotNullCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeIsNullCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeNoneCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\ReferenceTypeNotEqualCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\Conditions\StartsWithCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\IReferenceTypeCondition.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\IReferenceTypeFilter.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\IReferenceTypeFilterConfiguration.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\ReferenceTypeFilter.cs" />
+    <Compile Include="Filter\ReferenceTypeFilter\ReferenceTypeFilterConfiguration.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\BetweenCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\GreaterThanOrEqualCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\IsIntersectionCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeIsInCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\LessThanCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\LessThanOrEqualCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeEqualCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\GreaterThanCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeIsNotInCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeIsNotNullCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeIsNullCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeNoneCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\Conditions\ValueTypeNotEqualCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\IValueTypeCondition.cs" />
+    <Compile Include="Filter\ValueTypeFilter\IValueTypeFilter.cs" />
+    <Compile Include="Filter\ValueTypeFilter\IValueTypeFilterConfiguration.cs" />
+    <Compile Include="Filter\ValueTypeFilter\ValueTypeFilter.cs" />
+    <Compile Include="Filter\ValueTypeFilter\ValueTypeFilterConfiguration.cs" />
+    <Compile Include="Helpers\ExpressionHelper.cs" />
+    <Compile Include="Mvc\FilterValueModelBinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FilterClassDiagram.cd" />
+    <None Include="nuget-package\SprintFilterLib.nuspec" />
+    <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release "$(DevEnvDir)..\Tools\nuget" pack "$(SolutionDir)nuget-package\SprintFilterLib.nuspec" /OutputDirectory "$(SolutionDir)nuget-package"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
