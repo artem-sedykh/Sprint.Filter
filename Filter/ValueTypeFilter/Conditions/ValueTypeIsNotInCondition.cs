@@ -26,7 +26,7 @@ namespace Sprint.Filter.Conditions
 
         public Expression<Func<TModel, bool>> For<TModel>(Expression<Func<TModel, TProperty?>> property)
         {
-            if (Value != null && Value.Values != null)
+            if (Value != null && Value.Values != null && Value.Values.Any(x => x.HasValue))
             {
                 var values = Value.Values.Where(x => x != null).Select(x => x).ToList();
 

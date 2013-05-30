@@ -78,7 +78,7 @@ public ActionResult Filter(ActionGridOptions options, IMvcPrincipal user)
         <table>
             <tr>
                 <td>
-                    <span class="filter-panel-title">Мои фильтры</span>
+                    <span class="filter-panel-title">My Filters</span>
                 </td>
                 <td>
                     <a class="filter-background filter-background-white" data-grid-setting="@Model.UpdateTargetId" href="@Url.Action("GridSetting",new{gridKey=Model.UpdateTargetId})">
