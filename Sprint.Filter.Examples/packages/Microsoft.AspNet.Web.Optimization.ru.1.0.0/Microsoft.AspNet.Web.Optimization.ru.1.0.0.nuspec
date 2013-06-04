@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Web.Optimization.ru</id>
+    <version>1.0.0</version>
+    <title>Русские ресурсы Microsoft ASP.NET Web Optimization</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/weboptimization_1_eula_RUS.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Этот пакет содержит русские вспомогательные сборки для ASP.NET Web Optimization.</description>
+    <summary>Русские ресурсы для пакета Microsoft.AspNet.Web.Optimization</summary>
+    <language>ru</language>
+    <tags>Microsoft AspNet optimization bundling minification</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="[1.0.0]" />
+    </dependencies>
+  </metadata>
+</package>

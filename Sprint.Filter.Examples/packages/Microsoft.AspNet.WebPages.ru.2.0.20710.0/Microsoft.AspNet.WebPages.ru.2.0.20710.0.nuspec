@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebPages.ru</id>
+    <version>2.0.20710.0</version>
+    <title>Русские ресурсы Microsoft ASP.NET Web Pages 2</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/WebPages_2_eula_RUS.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-pages</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Этот пакет содержит русские вспомогательные сборки для ASP.NET Web Pages 2.</description>
+    <summary>Русские ресурсы для пакета Microsoft.AspNet.WebPages</summary>
+    <language>ru</language>
+    <tags>Microsoft AspNet WebPages AspNetWebPages</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebPages" version="[2.0.20710.0]" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Autofac.CommonServiceLocator.Indy</id>
+    <version>2.6.3.863</version>
+    <title>Autofac.CommonServiceLocator.Indy</title>
+    <authors>Autofac Contributors, John Batte</authors>
+    <owners>Autofac Contributors, John Batte</owners>
+    <projectUrl>http://code.google.com/p/autofac/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides an Autofac-specific implementation of the Common Service Locator Api.
+
+Independently cloned and packaged. Updated as regularly as possible to maintain parity with official Autofac releases.</description>
+    <releaseNotes>This version (2.6.3.863) is one revision bump from the offiical 2.6.3.862 release to accomodate the switch to my clone of the contrib repo, wherein I updated the Autofac reference using NuGet. Future release versions will be consistent with official Autofac releases.</releaseNotes>
+    <copyright />
+    <language />
+    <dependencies>
+      <dependency id="CommonServiceLocator" version="1.0" />
+      <dependency id="Autofac" version="2.6.3.862" />
+    </dependencies>
+  </metadata>
+</package>

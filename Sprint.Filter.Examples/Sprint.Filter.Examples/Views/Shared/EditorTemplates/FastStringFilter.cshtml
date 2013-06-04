@@ -1,0 +1,14 @@
+﻿@model Sprint.Filter.IFilterView
+@{
+    Layout = null;    
+}
+<dl>
+    <dt>
+        <label>@Model.Title</label>
+    </dt>    
+    <dd>
+        @Html.TextBoxFor(x=>x.LeftValue)
+    </dd>
+    @Html.HiddenFor(x=>x.TypeName)
+    @Html.HiddenFor(x=>x.ConditionKey)
+</dl>

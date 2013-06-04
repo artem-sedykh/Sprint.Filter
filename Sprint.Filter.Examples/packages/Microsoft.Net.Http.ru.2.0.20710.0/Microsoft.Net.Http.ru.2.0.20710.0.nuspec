@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.Http.ru</id>
+    <version>2.0.20710.0</version>
+    <title>Русские ресурсы по Microsoft .NET Framework 4 HTTP Client Libraries</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_RUS.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Этот пакет содержит русские вспомогательные сборки для Microsoft .NET Framework 4 HTTP Client Libraries.</description>
+    <summary>Русские ресурсы для пакета Microsoft.Net.Http</summary>
+    <language>ru</language>
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="[2.0.20710.0]" />
+    </dependencies>
+  </metadata>
+</package>

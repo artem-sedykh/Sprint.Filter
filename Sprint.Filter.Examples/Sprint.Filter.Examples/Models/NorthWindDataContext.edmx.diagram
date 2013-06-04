@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20ad078f2ca34b20869c5ce53acd9cbb" Name="Диаграмма1" ZoomLevel="75">
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Category" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Customer" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Employee" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.OrderDetail" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Product" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Shipper" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.Supplier" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.sysdiagram" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.CategoryProducts" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.CustomerOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.EmployeeOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.OrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.ShipperOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.ProductOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="Sprint.Filter.Examples.Models.SupplierProducts" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Sprint.Filter.Examples.Models.SavedFilter" Width="1.5" PointX="10.666882138078513" PointY="13.567320502161664" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

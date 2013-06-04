@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.WebPages.Deployment</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.WebPages.Deployment.PreApplicationStartCode">
+      <summary>Предоставляет точку регистрации предварительного кода запуска для развертывания веб-страниц.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.PreApplicationStartCode.Start">
+      <summary>Регистрирует предварительный код запуска для развертывания веб-страниц.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Deployment.WebPagesDeployment">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetAssemblyPath(System.Version)">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetExplicitWebPagesVersion(System.String)"></member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetIncompatibleDependencies(System.String)">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetMaxVersion">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetVersion(System.String)">
+      <param name="path">Путь к корневому каталогу приложения.</param>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetVersionWithoutEnabledCheck(System.String)">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.GetWebPagesAssemblies">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.IsEnabled(System.String)">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Deployment.WebPagesDeployment.IsExplicitlyDisabled(System.String)">
+      <summary>Этот тип или член поддерживает инфраструктуру .NET Framework и не предназначен для непосредственного использования из кода.</summary>
+    </member>
+  </members>
+</doc>

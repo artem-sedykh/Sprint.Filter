@@ -1,0 +1,17 @@
+﻿@model Sprint.Filter.IFilterView
+@{
+    Layout = null;
+    ViewData["ConditionKey"] = Model.ConditionKey;
+}
+<dl>
+    <dt>
+        <label>@Model.Title</label>
+    </dt>
+    <dd>
+        @Html.DropDownListFor(x=>x.ConditionKey,Model.GetConditions(),new{@class="input-medium"})
+    </dd>
+    <dd>
+        @Html.TextBoxFor(x=>x.LeftValue)
+    </dd>
+    @Html.HiddenFor(x=>x.TypeName)
+</dl>

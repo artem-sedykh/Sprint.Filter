@@ -1,0 +1,18 @@
+﻿<div class="contenthead">
+    <h4>@(Model.ToString())</h4>
+</div>
+
+@{Html.EnableClientValidation(); }
+@using (Html.BeginForm())
+{    
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)    
+    <div class="formbody">
+        @Html.EditorForModel()
+    </div>
+    <div class="form-modal-bottom"></div>
+    <div class="button-wraper">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a data-dismiss="modalbox" class="btn" href="javascript:;;">Close</a>
+    </div>    
+}

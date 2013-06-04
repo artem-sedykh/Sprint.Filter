@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebApi.WebHost.ru</id>
+    <version>4.0.20710.0</version>
+    <title>Русские ресурсы Microsoft ASP.NET Web API Web Host</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_eula_RUS.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Этот пакет содержит русские вспомогательные сборки для ASP.NET Web API Web Host.</description>
+    <summary>Русские ресурсы для пакета Microsoft.AspNet.WebApi.WebHost</summary>
+    <language>ru</language>
+    <tags>Microsoft AspNet WebApi AspNetWebApi WebHost</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.WebHost" version="[4.0.20710.0]" />
+    </dependencies>
+  </metadata>
+</package>

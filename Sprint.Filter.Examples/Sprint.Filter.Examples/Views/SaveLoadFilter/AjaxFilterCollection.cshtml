@@ -1,0 +1,28 @@
+﻿@using Sprint.Filter.Examples.Controllers
+@model Sprint.Filter.IFilterCollectionView
+@{
+    Layout = null;
+}
+<div data-filter-panel="@Url.Action("Filter")">
+    @Html.ActionLink("SaveFilter","Create","SimpleState",new{key=SaveLoadFilterController.FilterKey},new{@class="btn btn-primary",data_save_filter=SaveLoadFilterController.FilterKey})
+
+    <h4>Filters:</h4>
+
+    <div data-filter-list="@Url.Action("GetStateList", "SimpleState", new { key = SaveLoadFilterController.FilterKey, id = Model.FilterOptions.LoadFilterId })">
+        @Html.Action("GetStateList", "SimpleState", new { key = SaveLoadFilterController.FilterKey, id = Model.FilterOptions.LoadFilterId })
+    </div>
+   
+    @using (Ajax.BeginForm(Model.Action, Model.Controller, Model.RouteValues, new AjaxOptions {UpdateTargetId = Model.UpdateTargetId}))
+    {
+        foreach (var key in Model.Filters.Keys)
+        {
+            var template = Model.Filters[key].TemplateName;
+            @Html.EditorFor(f => Model.Filters[key], template)
+        }
+        <div class="clearfix"></div>
+        <div class="filter-collection-bottom">
+            <button type="submit" class="btn btn-primary">Apply</button>
+            @Html.ActionLink("Clear", "ClearFilter",null,new{@class="btn"})
+        </div>
+    }
+</div>
