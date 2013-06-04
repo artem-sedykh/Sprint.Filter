@@ -1,7 +1,9 @@
 ﻿namespace Sprint.Filter
 {
+    using System;
     using System.Collections.Generic;
 
+    [Serializable]
     public class FilterOptions : IFilterOptions
     {
         public FilterOptions()
