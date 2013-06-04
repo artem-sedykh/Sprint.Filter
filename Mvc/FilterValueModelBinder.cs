@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace Sprint.Mvc
 {
@@ -22,7 +23,17 @@ namespace Sprint.Mvc
 
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
+            var typeNameKey = bindingContext.ModelName + ".TypeName";
+
+            if (!bindingContext.ValueProvider.ContainsPrefix(typeNameKey))
+            {
+                throw new KeyNotFoundException(
+                    String.Format("Key {0} not found, add @Html.HiddenFor(x=>x.TypeName) in your FilterTemplate",
+                                  typeNameKey));
+            }
+
             var typeName = bindingContext.ValueProvider.GetValue(bindingContext.ModelName + ".TypeName").AttemptedValue;
+
             Type bindingType=null;
 
             if (ConcurrentDictionary.ContainsKey(typeName))            
@@ -37,12 +48,9 @@ namespace Sprint.Mvc
                         var nullableType = typeof(Nullable<>).MakeGenericType(type);
                         bindingType = typeof(FilterValue<>).MakeGenericType(nullableType);
                     }
-                    else
-                    {
+                    else                    
                         bindingType = typeof(FilterValue<>).MakeGenericType(type);
-
-                    }
-
+                    
                     ConcurrentDictionary[typeName] = bindingType;                  
                 }
             }
@@ -53,11 +61,7 @@ namespace Sprint.Mvc
 
                 bindingContext.ModelMetadata = metaData;
             }
-
-            
-            
-           
-
+                                 
             return base.BindModel(controllerContext, bindingContext);
         }
     }
