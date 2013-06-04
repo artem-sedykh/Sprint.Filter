@@ -61,9 +61,6 @@
     <Reference Include="Sprint.Core">
       <HintPath>..\packages\Sprint.Core.1.0.2.3\lib\net40-full\Sprint.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sprint.Filter">
-      <HintPath>..\packages\Sprint.Filter.2.0.0.2\lib\net40-full\Sprint.Filter.dll</HintPath>
-    </Reference>
     <Reference Include="Sprint.Grid">
       <HintPath>..\packages\Sprint.Grid.1.0.1.2\lib\net40-full\Sprint.Grid.dll</HintPath>
     </Reference>
@@ -448,6 +445,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sprint.Filter.csproj">
+      <Project>{d0871e42-2723-44f7-a1d0-15e76dc6defa}</Project>
+      <Name>Sprint.Filter</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
