@@ -94,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FilterClassDiagram.cd" />
-    <None Include="nuget-package\SprintFilterLib.nuspec" />
+    <None Include="nuget-package\SprintFilterLib.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>

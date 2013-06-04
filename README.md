@@ -143,3 +143,5 @@ public ActionResult Filter(ActionGridOptions options, IMvcPrincipal user)
 @Html.HiddenFor(m=>m.ConditionKey)
 @Html.HiddenFor(m=>m.TypeName)
 ```
+
+## [Examples](https://github.com/artem-sedykh/Sprint.Filter/tree/master/Sprint.Filter.Examples)
