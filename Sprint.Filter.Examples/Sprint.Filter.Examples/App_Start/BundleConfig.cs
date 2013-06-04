@@ -25,7 +25,8 @@ namespace Sprint.Filter.Examples
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/site.css",
-                "~/Scripts/jquery.modalbox/jquery.modalbox-1.5.css"));
+                "~/Scripts/jquery.modalbox/jquery.modalbox-1.5.css",
+                "~/Scripts/jquery.jnotifier/jnotifier.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -41,11 +42,21 @@ namespace Sprint.Filter.Examples
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
+            bundles.Add(new StyleBundle("~/Content/sprint.grid").Include(
+                "~/Content/sprint.grid.css",
+                "~/Content/sprintGridWithFilter.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/sprintGridWithFilter")
+                .Include(
+                "~/Scripts/sprintGridWithFilter.js",
+                "~/Scripts/sprint.grid/sprint.grid.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/saveloadfilter").Include("~/Scripts/saveloadfilter.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                 "~/Scripts/jquery.form.js",
-                "~/Scripts/jquery.modalbox/jquery.modalbox-1.5.js"
+                "~/Scripts/jquery.modalbox/jquery.modalbox-1.5.js",
+                 "~/Scripts/jquery.jnotifier/jnotifier.jquery.js"
                 ));
         }
     }

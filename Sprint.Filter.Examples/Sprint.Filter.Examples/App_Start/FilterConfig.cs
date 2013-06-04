@@ -1,13 +1,13 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Sprint.Filter.Examples.Attributes;
 
-namespace Sprint.Filter.Examples
+namespace Sprint.Filter.Examples.App_Start
 {
     public class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomHandleErrorAttribute());
         }
     }
 }

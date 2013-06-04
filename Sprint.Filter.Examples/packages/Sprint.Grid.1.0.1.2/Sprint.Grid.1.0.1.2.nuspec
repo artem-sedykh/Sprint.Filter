@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sprint.Grid</id>
+    <version>1.0.1.2</version>
+    <title>Sprint.Grid</title>
+    <authors>Artem Sedykh</authors>
+    <owners>Artem Sedykh</owners>
+    <projectUrl>https://github.com/artem-sedykh/Sprint.Grid</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Asp.Net MVC4 Grid</description>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>ASP.NET Mvc,Mvc 4, Grid, Sprint</tags>
+    <dependencies>
+      <dependency id="LinqKit" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -58,8 +58,14 @@
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="Sprint.Core">
+      <HintPath>..\packages\Sprint.Core.1.0.2.3\lib\net40-full\Sprint.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Sprint.Filter">
       <HintPath>..\packages\Sprint.Filter.2.0.0.2\lib\net40-full\Sprint.Filter.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprint.Grid">
+      <HintPath>..\packages\Sprint.Grid.1.0.1.2\lib\net40-full\Sprint.Grid.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -73,6 +79,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -154,18 +161,24 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\CustomHandleErrorAttribute.cs" />
+    <Compile Include="Attributes\DropDownList.cs" />
     <Compile Include="Attributes\SessionModelBinderAttribute.cs" />
+    <Compile Include="Attributes\ValidateModelStateAttribute.cs" />
     <Compile Include="Controllers\MultipleConditionsFilterController.cs" />
     <Compile Include="Controllers\PersistentFilterController.cs" />
     <Compile Include="Controllers\SaveLoadFilterController.cs" />
     <Compile Include="Controllers\SimpleFilterController.cs" />
     <Compile Include="Controllers\SimpleStateController.cs" />
+    <Compile Include="Controllers\SprintGridStateController.cs" />
+    <Compile Include="Controllers\SprintGridWithFilterController.cs" />
     <Compile Include="Filters\FilterConditions.cs" />
     <Compile Include="Filters\ProductFilter.cs" />
     <Compile Include="Filters\SimpleProductFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActionGridOptions.cs" />
     <Compile Include="Models\Category.cs">
       <DependentUpon>NorthWindDataContext.tt</DependentUpon>
     </Compile>
@@ -175,6 +188,8 @@
     <Compile Include="Models\Employee.cs">
       <DependentUpon>NorthWindDataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GridSettingView.cs" />
+    <Compile Include="Models\GridStateView.cs" />
     <Compile Include="Models\NorthWindDataContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +214,7 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>NorthWindDataContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductGridModel.cs" />
     <Compile Include="Models\SavedFilter.cs">
       <DependentUpon>NorthWindDataContext.tt</DependentUpon>
     </Compile>
@@ -214,7 +230,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Impl\SimpleStateService.cs" />
+    <Compile Include="Services\Impl\SprintGridStateService.cs" />
     <Compile Include="Services\ISimpleStateService.cs" />
+    <Compile Include="Services\ISprintGridStateService.cs" />
+    <Compile Include="Specifications\ProductSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-responsive.css" />
@@ -223,6 +242,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\sprint.grid.css" />
+    <Content Include="Content\sprint.grid.min.css" />
+    <Content Include="Content\sprintGridWithFilter.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -245,12 +268,16 @@
     <Content Include="Content\themes\base\jquery.ui.core.css" />
     <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
     <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
     <Content Include="Content\themes\base\jquery.ui.resizable.css" />
     <Content Include="Content\themes\base\jquery.ui.selectable.css" />
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -271,18 +298,26 @@
     <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <EntityDeploy Include="Models\NorthWindDataContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NorthWindDataContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\filter-icon.png" />
+    <Content Include="Images\grid-icons.png" />
+    <Content Include="Images\highlight.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\magglass.png" />
     <Content Include="Models\NorthWindDataContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NorthWindDataContext.edmx</DependentUpon>
@@ -302,10 +337,35 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
     <Content Include="Scripts\jquery.form.js" />
     <Content Include="Scripts\jquery.form.min.js">
       <DependentUpon>jquery.form.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery.jnotifier\images\accept.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\basket.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\bell.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\book_addresses.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\cog.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\comment.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\date.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\delete.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\email.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\error.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\exclamation.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\help.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\information.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\lightbulb.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\message-close.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\notification-x.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\notification-y.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\notification.png" />
+    <Content Include="Scripts\jquery.jnotifier\images\user_green.png" />
+    <Content Include="Scripts\jquery.jnotifier\jnotifier.css" />
+    <Content Include="Scripts\jquery.jnotifier\jnotifier.jquery.js" />
+    <Content Include="Scripts\jquery.jnotifier\jnotifier.jquery.min.js" />
+    <Content Include="Scripts\jquery.jnotifier\jnotifier.min.css" />
     <Content Include="Scripts\jquery.modalbox\jquery.modalbox-1.5.min.css">
       <DependentUpon>jquery.modalbox-1.5.css</DependentUpon>
     </Content>
@@ -318,9 +378,8 @@
     <Content Include="Scripts\jquery.form.min.js.map">
       <DependentUpon>jquery.form.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery.jnotifier\jnotifier.jquery.min.js.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\jquery.modalbox\img\modalbox-x.png" />
     <Content Include="Scripts\jquery.modalbox\img\modalbox-y.png" />
     <Content Include="Scripts\jquery.modalbox\img\modalbox.png" />
@@ -337,6 +396,12 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\saveloadfilter.js" />
+    <Content Include="Scripts\sprint.grid\sprint.grid.js" />
+    <Content Include="Scripts\sprint.grid\sprint.grid.min.js" />
+    <Content Include="Scripts\sprintGridWithFilter.js" />
+    <Content Include="Scripts\sprintGridWithFilter.min.js">
+      <DependentUpon>sprintGridWithFilter.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -364,6 +429,16 @@
     <Content Include="Views\Shared\CreateModal.cshtml" />
     <Content Include="Views\Shared\EditModal.cshtml" />
     <Content Include="Views\SimpleState\StateList.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\Index.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\FilterPanel.cshtml" />
+    <Content Include="Views\SprintGridState\StateList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Object.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\FilterCollection.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\GridSetting.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\EditorTemplates\StringFilter.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\EditorTemplates\NumberFilter.cshtml" />
+    <Content Include="Views\SprintGridWithFilter\EditorTemplates\FilterWithListBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

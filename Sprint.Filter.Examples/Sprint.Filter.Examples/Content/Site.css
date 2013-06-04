@@ -44,3 +44,6 @@ margin-bottom: 6px;
 .selected {
     font-weight: bold;
 }
+.modalbox-content form {
+    margin: 0;
+}

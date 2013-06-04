@@ -1,0 +1,441 @@
+﻿.sprint-grid,.grid-group-wrap {
+    border: 1px solid #AAA;
+    border-bottom: none;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.sprint-grid table {
+    width: 100%;    
+    border-spacing: 0;
+    
+}
+*:first-child + html .sprint-grid table {
+    border-collapse: collapse;    
+}
+
+/*-----------------------------------grouping----------------------------------------------------------*/
+.grouping-header-empty {
+    margin: 0;
+    float: left;    
+}
+.grouping-header, .group-indicator, .group-draggable-header, .sprint-grid table thead th, .pagination, .grid-header {    
+	background-image: url('../Images/highlight.png');
+}
+
+.grouping-header{
+    position: relative;
+    background-color: #F1F2F4;
+    background-position: 0 center;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 3px 7px;
+    height: 24px;          
+    color: #2e2e2e;
+    line-height: 2;
+    cursor: default;
+    border-bottom: 1px solid #AAA;
+}
+.group-drop-button {
+    padding: 0;
+    line-height: 1;
+}
+.group-indicator {    
+    background-repeat: repeat;
+    width: auto;
+    height: auto;
+    display: block;        
+    border: 1px solid #c5c5c5;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0 3px;
+    /*padding: .15em .15em .15em .4em;*/
+    padding: .15em .15em .15em .1em;
+    line-height: 1.5em;
+    cursor: pointer;
+    color: #2e2e2e;    
+}
+.grid-icon {               
+    opacity: 1;
+    display: inline-block;
+    overflow: hidden;    
+    font-size: 0;
+    line-height: 0;
+    text-indent: -3333px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.group-drop-button  span {
+    background: url('../Images/grid-icons.png') no-repeat transparent;    
+    background-position: -6px -193px;
+    margin: 0 2px 0 4px;
+    width: 16px;
+    height: 16px;
+}
+
+*:first-child + html .group-draggable-header {
+    display: inline!important;    
+}
+.group-draggable-header {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #F1F2F4;
+    background-position: 0 center;
+    background-repeat: repeat;            
+    border: 1px solid #c5c5c5;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0 3px;
+    padding: .15em .9em .15em .4em;
+    line-height: 1.5em;
+    cursor: pointer;
+    color: #2e2e2e;     
+}    
+.group-draggable-header i {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -223px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 3px 0 3px;
+    line-height: 14px;
+    vertical-align: text-top;
+}
+.group-draggable-header.add i {
+    background-position: -6px -251px;
+}
+.grouping-header .group-indicator{
+    float: left;
+}
+
+.group-placeholder {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -12px -277px;
+    width: 6px;
+    height: 25px;    
+    visibility: visible!important;
+    float: left;    
+}
+*:first-child + html .asc-group-sort, .desc-group-sort{
+    text-indent: 0;
+}
+
+.asc-group-sort {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -18px;
+    width: 16px;
+    height: 16px;
+}
+.desc-group-sort {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -48px;
+    width: 16px;
+    height: 16px;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------header------------------------------------------------------------*/
+
+.grid-sort-wrapper td {
+    padding: 0!important;
+}
+
+.sprint-grid table thead th.sorted {
+    background-color: #ebebeb;
+}
+.sprint-grid table thead th {
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+    height: 26px;    
+    border-right: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+    text-align: left;
+    font-weight: normal;
+    background-color: #F1F2F4;
+    background-position: 0 center;
+    background-repeat: repeat;
+}
+.sprint-grid table thead th:last-child {
+    border-right: none;
+}
+.grid-column-wrap  {
+    position: relative;
+    padding-left: .6em;
+    cursor: default;
+}
+
+.grid-column-title {    
+    display: block;
+    min-height: 18px;
+    line-height: 18px;
+    margin: -0.5em -0.6em -0.4em -0.6em;
+    padding: .5em .6em .4em .6em;
+}
+*:first-child + html .grid-sort-link {
+    line-height: normal!important;
+}
+.grid-sort-link {
+    cursor: pointer;
+    display: block;
+    min-height: 18px;
+    line-height: 18px;
+    margin: -0.5em -0.6em -0.4em -0.6em;
+    padding: .5em .6em .4em .6em;
+    white-space: nowrap;
+}
+
+.arrow-up, .arrow-down {
+    color: #2e2e2e;
+}
+.arrow-up-disabled, .arrow-down-disabled {
+    color: #A6A6A6;
+}
+.grid-title-wrapper sup {
+    margin-top: -2px;
+    margin-left: 1px;
+    position: absolute;
+}
+
+.grid-column-wrap.ui-draggable {
+    cursor: pointer;
+}
+.grid-group-tag {
+    cursor: pointer;
+    font-size: 70%;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    line-height: normal;
+}
+.sort-order {
+    cursor: pointer;
+    font-size: 80%;
+    right: 0;
+    position: absolute;
+    top: 2px;
+    line-height: normal;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+
+.sprint-grid table td
+{
+    color: #333;
+    border-bottom: 1px solid #AAA;
+    height: 100%;
+    padding: 5px 0 5px 5px;
+}
+.sprint-grid table tr.alternate {
+    background-color: #f3f7fc; 
+}
+
+.hierarchy-cell {
+    width: 18px;    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.hierarchy-cell-right {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid-group-table {        
+    border-bottom: none;
+    margin-right: 10px;
+}
+
+.minus,.minus-all {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -164px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.plus,.plus-all {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -131px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.grid-group-row {
+    padding-left: 0!important;
+}
+/*region ---------------------Pagination-------------------*/
+*:first-child + html .grid-pagination-wrap {
+    border-top: 1px solid #AAA;
+}
+.grid-pagination-wrap
+{
+    font-size: 11px;
+    background-color: #F1F2F4;
+    background-position: 0 center;
+    background-repeat: repeat;        
+    border-bottom: 1px solid #AAA;    
+    padding: 5px;
+    height: 16px !important;
+    margin: 0!important;
+    min-width: 480px;
+    color: #2e2e2e;
+}
+.grid-status {
+    border-color: #AAA;    
+    float: left;
+    margin: -.5em .6em -.2em -.6em;
+    padding: .2em .6em;
+    padding-left: 0.7em;
+    height: 2em;    
+    border-right-width: 1px;
+    border-right-style: solid;    
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.grid-status-icon {
+    cursor: pointer;
+    margin-top: 3px;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    line-height: 0!important;
+    overflow: hidden;
+    text-align: center;
+    text-indent: -3333px;
+    width: 16px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none!important;
+    padding: 0!important;
+}
+*:first-child + html .grid-status-icon{
+    text-indent: 0;
+}
+.loading{
+     background-image: url("../Images/loading.gif");
+}
+
+.refresh{
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -310px;
+}
+.pagination {
+    position: relative;    
+}
+
+/*.disabled a, .active a{
+    color: #777!important;    
+}*/
+
+span.asc-sort {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -76px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;    
+    font-size: 0;
+    line-height: 0;
+    text-indent: -3333px;
+    text-align: center;
+    vertical-align: middle;
+}
+span.desc-sort {
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -6px -102px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;    
+    font-size: 0;
+    line-height: 0;
+    text-indent: -3333px;
+    text-align: center;
+    vertical-align: middle;
+}
+.grid-pager-button-disabled, .grid-pager-button {
+    display: block;    
+    float: left;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -2px -341px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: -4px;
+    outline: 0;
+}
+.grid-pager-button-disabled {
+    cursor: default;
+}
+a.grid-pager-button:hover{
+    background-position: -2px -377px;
+}
+.grid-pager-button-disabled .grid-pager-next {
+    background-position: -12px -461px;
+}
+.grid-pager-next {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -12px -426px;
+    width: 8px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.grid-pager-button-disabled .grid-pager-last {
+    background-position: -12px -605px;
+}
+.grid-pager-last {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -12px -563px;
+    width: 8px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.grid-pager-button-disabled .grid-pager-first {
+    background-position: -12px -642px;
+}
+.grid-pager-first {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -12px -684px;
+    width: 8px;
+    height: 10px;
+    margin-left: 9px;
+    margin-top: 8px;
+}
+.grid-pager-button-disabled .grid-pager-prev {
+    background-position: -12px -493px;
+}
+.grid-pager-prev {
+    display: block;
+    background: url('../Images/grid-icons.png') no-repeat transparent;
+    background-position: -12px -528px;
+    width: 8px;
+    height: 10px;
+    margin-left: 9px;
+    margin-top: 8px;
+}
+.grid-pager-pagenumber {
+    display: block;        
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.grid-pager-total {
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+.grid-group-count {
+    float: right;
+    margin-right: 10px;
+}

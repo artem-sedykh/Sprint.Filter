@@ -6,7 +6,7 @@ using Sprint.Filter.Examples.Models;
 
 namespace Sprint.Filter.Examples.Filters
 {
-    public class ProductFilter : FilterCollection
+    public sealed class ProductFilter : FilterCollection
     {
         public ProductFilter(NorthwindDataContext dc)
         {

@@ -15,6 +15,7 @@ namespace Sprint.Filter.Examples.App_Start
                 .As<NorthwindDataContext>().InstancePerHttpRequest();
 
             builder.RegisterType<SimpleStateService>().As<ISimpleStateService>().InstancePerHttpRequest();
+            builder.RegisterType<SprintGridStateService>().As<ISprintGridStateService>().InstancePerHttpRequest();
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿@model Sprint.Filter.IFilterCollectionView
+@{
+    Layout = null;
+}
+<div class="contenthead">
+    <h4>Filters:</h4>
+</div>
+
+@{Html.EnableClientValidation(); }
+ @using (Html.BeginForm(Model.Action, Model.Controller, Model.RouteValues, FormMethod.Post, new {@class = "ajax-filter", data_update_grid = @Model.UpdateTargetId}))
+ {
+     @Html.AntiForgeryToken()
+     @Html.ValidationSummary(true)
+     <div class="formbody">
+         @foreach (var key in Model.Filters.Keys)
+         {
+             var template = Model.Filters[key].TemplateName;
+             @Html.EditorFor(f => Model.Filters[key], template)
+         }
+     </div>
+     <div class="form-modal-bottom"></div>
+     <div class="button-wraper">
+         <button type="submit" class="btn btn-primary">Apply</button>
+         <a data-dismiss="modalbox" class="btn" href="javascript:;;">Close</a>
+     </div>
+ }

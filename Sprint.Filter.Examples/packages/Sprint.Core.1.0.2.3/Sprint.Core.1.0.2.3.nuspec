@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sprint.Core</id>
+    <version>1.0.2.3</version>
+    <title>Sprint.Core</title>
+    <authors>Artem Sedykh</authors>
+    <owners>Artem Sedykh</owners>
+    <projectUrl>http://sprint.tfs.intravision.ru/SprintCore</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensions, Helpers, Infrastructure, Specifications for Sprint</description>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>ASP.NET MVC, Sprint</tags>
+    <dependencies>
+      <dependency id="LinqKit" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
