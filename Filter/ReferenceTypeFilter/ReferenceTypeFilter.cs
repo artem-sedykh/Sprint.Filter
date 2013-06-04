@@ -207,9 +207,7 @@ namespace Sprint.Filter
             var value = (_initFilterValue ?? _defaultFilterValue) ??
                         (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);
 
-            value = value ?? (new FilterValue<TProperty> { ConditionKey = _conditions.Keys.FirstOrDefault() });
-
-            value.TypeName = typeof (TProperty).FullName;
+            value = value ?? (new FilterValue<TProperty> { ConditionKey = _conditions.Keys.FirstOrDefault() });            
 
             _filterValue = value;
 

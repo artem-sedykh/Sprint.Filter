@@ -14,7 +14,7 @@
 
         object RightValue { get; }
 
-        string TypeName { get; set; }
+        string TypeName { get; }
     }
 
     public interface IFilterValue<out TModel> : IFilterValue
