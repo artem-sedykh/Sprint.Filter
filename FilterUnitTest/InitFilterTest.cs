@@ -185,6 +185,6 @@ namespace FilterUnitTest
 
             Assert.IsTrue(expr3.Compile()(new TestSource { Name = "12" }));
             Assert.IsFalse(expr3.Compile()(new TestSource { Name = "10" }));
-        }
+        }        
     }
 }
