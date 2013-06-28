@@ -2,14 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Sprint.Filter</id>
-        <version>2.0.0.2</version>
+		    <version>2.0.0.2</version>		
         <authors>Artem Sedykh</authors>
-        <owners>Artem Sedykh</owners>        
+        <owners>Artem Sedykh</owners>     		
         <projectUrl>https://github.com/artem-sedykh/Sprint.Filter</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>        
         <description>Filtering data in ASP.NET MVC</description>
         <language>en-US</language>
         <tags>ASP.NET MVC, Filter, Sprint</tags>
+		    <releaseNotes>Bug fixes</releaseNotes>
       <dependencies>
         <dependency id="LinqKit" version="1.0" />
       </dependencies>

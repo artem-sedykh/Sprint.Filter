@@ -44,10 +44,7 @@ namespace Sprint.Mvc
                 if (type != null)
                 {
                     if (type.IsValueType)
-                    {
-                        var nullableType = typeof(Nullable<>).MakeGenericType(type);
-                        bindingType = typeof(FilterValue<>).MakeGenericType(nullableType);
-                    }
+                        bindingType = typeof(FilterValue<>).MakeGenericType(typeof(Nullable<>).MakeGenericType(type));
                     else                    
                         bindingType = typeof(FilterValue<>).MakeGenericType(type);
                     

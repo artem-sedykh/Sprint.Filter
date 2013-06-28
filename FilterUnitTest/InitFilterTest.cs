@@ -1,4 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using System.Collections.Specialized;
+using System.Web.Mvc;
+using FilterUnitTest.Model;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sprint.Filter;
 using Sprint.Filter.Conditions;
 
@@ -186,5 +190,61 @@ namespace FilterUnitTest
             Assert.IsTrue(expr3.Compile()(new TestSource { Name = "12" }));
             Assert.IsFalse(expr3.Compile()(new TestSource { Name = "10" }));
         }        
+
+        [TestMethod]
+        public void Init_And_BuildExpression()
+        {
+            var formCollection = new NameValueCollection
+                {
+                    {"Filters[CategoryId].Values", "1"},
+                    {"Filters[CategoryId].Values", "14"},
+                    {"Filters[CategoryId].Values", "5"},
+                    {"Filters[CategoryId].ConditionKey", "isin"},
+                    {"Filters[CategoryId].TypeName", typeof(Int32).FullName},
+                
+                    {"Filters[UnitPrice].LeftValue", "10"},
+                    {"Filters[UnitPrice].RightValue", "2345.14"},
+                    {"Filters[UnitPrice].ConditionKey", "between"},
+                    {"Filters[UnitPrice].TypeName", typeof(Decimal).FullName},
+
+                    {"Filters[Name].LeftValue", "testname"},
+                    {"Filters[Name].ConditionKey", "contains"},
+                    {"Filters[Name].TypeName", typeof(string).FullName}
+                };
+
+            var modelBinder = new DefaultModelBinder();
+
+            var valueProvider = new NameValueCollectionValueProvider(formCollection, null);
+
+            var bindingContext = new ModelBindingContext
+            {
+                ModelName = string.Empty,
+                ValueProvider = valueProvider,
+                ModelMetadata = ModelMetadataProviders.Current.GetMetadataForType(null, typeof(FilterOptions)),
+            };
+
+            var controllerContext = new ControllerContext();
+
+            var filterOptions = modelBinder.BindModel(controllerContext, bindingContext) as IFilterOptions;
+
+            Assert.IsNotNull(filterOptions);
+
+            var productFilter = new ProductFilter().Init(filterOptions);
+
+            var expression = productFilter.BuildExpression<Product>();
+
+            Assert.IsNotNull(expression);
+
+            var predicat = expression.Compile();
+
+            Assert.IsFalse(predicat(new Product()));
+
+            Assert.IsTrue(predicat(new Product
+                {
+                    Name = "testname",
+                    CategoryId = 14,
+                    UnitPrice = 23,
+                }));            
+        }
     }
 }

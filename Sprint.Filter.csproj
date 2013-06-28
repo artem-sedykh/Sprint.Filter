@@ -11,6 +11,9 @@
     <AssemblyName>Sprint.Filter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+	<NugetDir>$(DevEnvDir)..\Tools\nuget</NugetDir>
+	<nuspecDir>$(SolutionDir)nuget-package\SprintFilterLib.nuspec</nuspecDir>
+	<OutputPackageDirectory>$(SolutionDir)nuget-package</OutputPackageDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -103,13 +106,21 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release "$(DevEnvDir)..\Tools\nuget" pack "$(SolutionDir)nuget-package\SprintFilterLib.nuspec" /OutputDirectory "$(SolutionDir)nuget-package"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
+    </GetAssemblyIdentity>
+    <Exec Command="echo %(AssemblyVersion.Version)" />
+    <Message Text="Released " Importance="high" />
+    <Exec Command="&quot;$(NugetDir)&quot; pack &quot;$(nuspecDir)&quot; -Version %(AssemblyVersion.Version)  /OutputDirectory &quot;$(OutputPackageDirectory)&quot;" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
+
   -->
 </Project>

@@ -61,6 +61,9 @@
   <ItemGroup>
     <Compile Include="FilterValueModelBinderTest.cs" />
     <Compile Include="InitFilterTest.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductFilter.cs" />
     <Compile Include="ReferenceTypeConditionsTest.cs" />
     <Compile Include="ConditionBuilderTest.cs" />
     <Compile Include="ValueTypeConditionsTest.cs" />
@@ -76,6 +79,7 @@
     <Fakes Include="Fakes\Sprint.Filter.fakes" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
