@@ -12,7 +12,11 @@ namespace Sprint.Filter
 
         void For(Expression<Func<TModel, TProperty?>> left, Expression<Func<TModel, TProperty?>> right);
 
-        void ConditionBuilder<T>(Func<Expression<Func<TModel, bool>>, string, Expression<Func<T, bool>>> builder);
+        void ConditionBuilder<T>(Func<
+             IFilterValue<TProperty?>,
+             Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>,
+             string,
+             Expression<Func<T, bool>>> builder);
 
         void Conditions(Action<IDictionary<string, IValueTypeCondition<TProperty>>> conditions);
 

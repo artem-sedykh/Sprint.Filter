@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
+using System.Linq.Expressions;
 using System.Web.Mvc;
 using FilterUnitTest.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -235,9 +236,8 @@ namespace FilterUnitTest
 
             Assert.IsNotNull(expression);
 
-            var predicat = expression.Compile();
-
-            Assert.IsFalse(predicat(new Product()));
+            var predicat = expression.Compile();         
+            Assert.IsFalse(predicat(new Product{CategoryId = 24444,Name = string.Empty}));
 
             Assert.IsTrue(predicat(new Product
                 {

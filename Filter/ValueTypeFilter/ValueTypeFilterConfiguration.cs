@@ -109,7 +109,11 @@ namespace Sprint.Filter
             return this;
         }
 
-        public IValueTypeFilterConfiguration<TModel, TProperty> ConditionBuilder<T>(Func<Expression<Func<TModel, bool>>, string, Expression<Func<T, bool>>> builder)
+        public IValueTypeFilterConfiguration<TModel, TProperty> ConditionBuilder<T>(Func<
+             IFilterValue<TProperty?>,
+             Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>,
+             string,
+             Expression<Func<T, bool>>> builder)
         {
             _filter.ConditionBuilder(builder);
 

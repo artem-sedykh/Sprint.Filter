@@ -92,6 +92,10 @@ namespace Sprint.Filter
         /// </summary>
         /// <typeparam name="T">Type.</typeparam>
         /// <param name="builder">Builder.</param>     
-        IReferenceTypeFilterConfiguration<TModel, TProperty> ConditionBuilder<T>(Func<Expression<Func<TModel, bool>>, string, Expression<Func<T, bool>>> builder);
+        IReferenceTypeFilterConfiguration<TModel, TProperty> ConditionBuilder<T>(Func<
+            IFilterValue<TProperty>,
+            Func<IFilterValue<TProperty>, Expression<Func<TModel, bool>>>,
+            string,
+            Expression<Func<T, bool>>> builder);
     }
 }

@@ -102,8 +102,9 @@ namespace FilterUnitTest
                     conditions["isnotnull"] = new ReferenceTypeIsNotNullCondition<string>();
                 });
 
-            filter.ConditionBuilder((expression, conditionKey) =>
-            {
+            filter.ConditionBuilder((filterValue,condition, conditionKey) =>
+                {
+                    var expression = condition(filterValue);
                 if (expression == null)
                     return null;
 
@@ -189,8 +190,9 @@ namespace FilterUnitTest
                 conditions["isnotnull"] = new ValueTypeIsNullCondition<int>();
             });
 
-            filter.ConditionBuilder((expression, conditionKey) =>
-            {
+            filter.ConditionBuilder((filterValue,condition, conditionKey) =>
+                {
+                    var expression = condition(filterValue);
                 if (expression == null)
                     return null;
 

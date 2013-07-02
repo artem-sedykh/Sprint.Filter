@@ -17,7 +17,10 @@ namespace Sprint.Filter
         private readonly string _typeName;
         private Lazy<IEnumerable<SelectListItem>> _lazyDictionary;
         private IQueryable<SelectListItem> _dictionary;
-        private Func<Expression<Func<TModel, bool>>, string, object> _expressionBuilder;
+        private Func<IFilterValue<TProperty>,
+            Func<IFilterValue<TProperty>, Expression<Func<TModel, bool>>>,
+            string, object> _expressionBuilder;
+
         private IFilterValue<TProperty> _defaultFilterValue;
         private IFilterValue<TProperty> _initFilterValue;
         private Lazy<IFilterValue<TProperty>> _defaultLazyFilterValue;
@@ -110,18 +113,11 @@ namespace Sprint.Filter
             {
                 var selectedCondition = GetCondition();
 
-                var expression = _conditionInvoker(selectedCondition.Value, GetFilterValue());
-                if (_expressionBuilder != null)
-                {
-                    var result = _expressionBuilder(expression, selectedCondition.Key) as Expression<Func<T, bool>>;
-                    return result != null ? result.Expand() : null;
-                }
+                var expression = (_expressionBuilder != null 
+                    ? _expressionBuilder(GetFilterValue(), filterValue => _conditionInvoker(selectedCondition.Value, filterValue), selectedCondition.Key)
+                    : _conditionInvoker(selectedCondition.Value, GetFilterValue())) as Expression<Func<T, bool>>;
 
-// ReSharper disable SuspiciousTypeConversion.Global
-// ReSharper disable ExpressionIsAlwaysNull
-                return expression as Expression<Func<T, bool>>;
-// ReSharper restore ExpressionIsAlwaysNull
-// ReSharper restore SuspiciousTypeConversion.Global
+                return expression != null ? expression.Expand() : null;
             }
 
             return null;
@@ -187,9 +183,13 @@ namespace Sprint.Filter
             };      
         }
 
-        public void ConditionBuilder<T>(Func<Expression<Func<TModel, bool>>, string, Expression<Func<T, bool>>> epxression)
+        public void ConditionBuilder<T>(Func<
+            IFilterValue<TProperty>,
+            Func<IFilterValue<TProperty>, Expression<Func<TModel, bool>>>,
+            string,
+            Expression<Func<T, bool>>> builder)
         {
-            _expressionBuilder = epxression;
+            _expressionBuilder = builder;
 
             _returnModelType = typeof(T);
         }
