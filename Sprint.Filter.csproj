@@ -106,6 +106,9 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\IFilterValue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
