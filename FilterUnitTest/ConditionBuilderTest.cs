@@ -21,6 +21,8 @@ namespace FilterUnitTest
         public string Name { get; set; }
 
         public IEnumerable<User> Users { get; set; }
+
+        public IQueryable<User> QueryUsers { get; set; }
     }
 
     internal class User

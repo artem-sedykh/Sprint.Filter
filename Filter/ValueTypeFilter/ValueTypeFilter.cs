@@ -128,7 +128,7 @@ namespace Sprint.Filter
                         _conditionInvoker != null ? (filterValue => new LambdaExpressionDecorator<Func<TModel, bool>>(_conditionInvoker(selectedCondition.Value, filterValue))) : (Func<IFilterValue<TProperty?>, LambdaExpressionDecorator<Func<TModel, bool>>>)null,                        
                         selectedCondition.Key) as Expression<Func<T, bool>>;
 
-                    return expr != null ? expr.Expand().ExpandLambdaExpressionDecorators() : null;
+                    return expr != null ? expr.ExpandLambdaExpressionDecorators() : null;
                 }
 
                 if(_conditionInvoker != null)

@@ -236,7 +236,8 @@ namespace FilterUnitTest
 
             Assert.IsNotNull(expression);
 
-            var predicat = expression.Compile();         
+            var predicat = expression.Compile();
+
             Assert.IsFalse(predicat(new Product{CategoryId = 24444,Name = string.Empty}));
 
             Assert.IsTrue(predicat(new Product
