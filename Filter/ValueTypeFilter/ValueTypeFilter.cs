@@ -119,10 +119,10 @@ namespace Sprint.Filter
 
                 if(_expressionBuilder != null)
                 {
-                    var selectedCondition = GetCondition();
+                    var selectedCondition = GetCondition(value);
 
                     var expr = _expressionBuilder(value,
-                        filterValue => _conditionInvoker(selectedCondition.Value, filterValue), 
+                        _conditionInvoker != null ? (filterValue => _conditionInvoker(selectedCondition.Value, filterValue)) : (Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>)null,                        
                         selectedCondition.Key) as Expression<Func<T, bool>>;
 
                     return expr != null ? expr.Expand() : null;
@@ -130,7 +130,7 @@ namespace Sprint.Filter
 
                 if(_conditionInvoker != null)
                 {
-                    var selectedCondition = GetCondition();
+                    var selectedCondition = GetCondition(value);
 
                     var expr = _conditionInvoker(selectedCondition.Value, GetFilterValue());
 
@@ -235,11 +235,9 @@ namespace Sprint.Filter
             return value;
         }
 
-        private KeyValuePair<string, IValueTypeCondition<TProperty>> GetCondition()
-        {
-            var key = GetFilterValue().ConditionKey;
-
-            return _conditions.FirstOrDefault(x => x.Key == key);
+        private KeyValuePair<string, IValueTypeCondition<TProperty>> GetCondition(IFilterValue filterValue)
+        {            
+            return _conditions.FirstOrDefault(x => x.Key == filterValue.ConditionKey);
         }
     }
 }

@@ -1231,8 +1231,8 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ForExpressionOfFuncOfT0T1ExpressionOfFuncOfT0T1">
             <summary>Sets the shim of ReferenceTypeFilter`2.For(Expression`1&lt;Func`2&lt;!0,!1&gt;&gt; left, Expression`1&lt;Func`2&lt;!0,!1&gt;&gt; right)</summary>
         </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetCondition">
-            <summary>Sets the shim of ReferenceTypeFilter`2.GetCondition()</summary>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetConditionIFilterValue">
+            <summary>Sets the shim of ReferenceTypeFilter`2.GetCondition(IFilterValue filterValue)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.GetFilterValue()</summary>
@@ -1342,8 +1342,8 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ForExpressionOfFuncOfT0T1ExpressionOfFuncOfT0T1">
             <summary>Sets the shim of ReferenceTypeFilter`2.For(Expression`1&lt;Func`2&lt;!0,!1&gt;&gt; left, Expression`1&lt;Func`2&lt;!0,!1&gt;&gt; right)</summary>
         </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetCondition">
-            <summary>Sets the shim of ReferenceTypeFilter`2.GetCondition()</summary>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetConditionIFilterValue">
+            <summary>Sets the shim of ReferenceTypeFilter`2.GetCondition(IFilterValue filterValue)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.GetFilterValue()</summary>
