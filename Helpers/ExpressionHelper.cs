@@ -2,9 +2,20 @@
 {
     using System;
     using System.Linq.Expressions;
+    using System.Reflection;
 
     public static class ExpressionHelper
     {
+        private static readonly ExpressionVisitor Visitor = new LambdaExpressionDecoratorVisitor();
+
+        internal static Expression<Func<TModel, bool>> ExpandLambdaExpressionDecorators<TModel>(this Expression<Func<TModel, bool>> expression)
+        {
+            if(expression == null)
+                return null;
+
+            return (Expression<Func<TModel, bool>>)Visitor.Visit(expression);
+        }
+
         /// <summary>
         /// Building a strongly typed lambda expression to calculate the intersections of intervals.
         /// </summary>
@@ -88,6 +99,27 @@
 
             var expressionSecondIntervalEnd = Expression.Constant(secondIntervalEnd, type);
             return LinqKit.Extensions.Expand(Expression.Lambda<Func<TSource, bool>>(Expression.LessThanOrEqual(expressionFirstIntervalBegin, expressionSecondIntervalEnd), parametr));
+        }
+    }
+
+    internal class LambdaExpressionDecoratorVisitor : ExpressionVisitor
+    {
+        private static readonly Type ExpressionDecoratorType = typeof(LambdaExpressionDecorator<>);
+
+        protected override Expression VisitUnary(UnaryExpression node)
+        {
+            if (node.NodeType == ExpressionType.Convert && node.Operand.Type.IsGenericType && node.Operand.Type.GetGenericTypeDefinition() == ExpressionDecoratorType)
+            {
+                var decorator = Expression.Lambda<Func<object>>(node.Operand).Compile()();
+
+                var expressionProperty = decorator.GetType().GetProperty("Expression", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                
+                var expr = (Expression)expressionProperty.GetValue(decorator, null);
+
+                return expr;
+            }
+
+            return base.VisitUnary(node);
         }
     }
 }

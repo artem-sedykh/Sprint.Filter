@@ -91,6 +91,7 @@
     <Compile Include="Filter\ValueTypeFilter\IValueTypeFilterConfiguration.cs" />
     <Compile Include="Filter\ValueTypeFilter\ValueTypeFilter.cs" />
     <Compile Include="Filter\ValueTypeFilter\ValueTypeFilterConfiguration.cs" />
+    <Compile Include="Helpers\ExpressionDecorator.cs" />
     <Compile Include="Helpers\ExpressionHelper.cs" />
     <Compile Include="Mvc\FilterValueModelBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

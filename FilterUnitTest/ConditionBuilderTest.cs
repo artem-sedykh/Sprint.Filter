@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 using LinqKit;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sprint.Filter;
@@ -102,26 +104,26 @@ namespace FilterUnitTest
                     conditions["isnotnull"] = new ReferenceTypeIsNotNullCondition<string>();
                 });
 
-            filter.ConditionBuilder((filterValue,condition, conditionKey) =>
-                {
-                    var expression = condition(filterValue);
-                if (expression == null)
+            filter.ConditionBuilder((filterValue, condition, conditionKey) => {
+                var expression = condition(filterValue);
+                
+                if(expression == null)
                     return null;
 
-                switch (conditionKey)
+                switch(conditionKey)
                 {
                     case "isnotnull":
-                        {
-                            return Linq.Expr<Task, bool>(x => x.Users.AsQueryable().Any());
-                        }
+                    {
+                        return Linq.Expr<Task, bool>(x => x.Users.Any());
+                    }
                     case "isnull":
-                        {
-                            return Linq.Expr<Task, bool>(x => !x.Users.AsQueryable().Any());
-                        }
-                    default://for equal,isin
-                        {
-                            return Linq.Expr<Task, bool>(x => x.Users.AsQueryable().Any(expression));
-                        }
+                    {
+                        return Linq.Expr<Task, bool>(x => !x.Users.Any());
+                    }
+                    default: //for equal,isin
+                    {
+                        return Linq.Expr<Task, bool>(x => x.Users.Any(expression));
+                    }
                 }
             });
 

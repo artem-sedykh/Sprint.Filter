@@ -1,4 +1,7 @@
-﻿// ReSharper disable CheckNamespace
+﻿using Sprint.Helpers;
+// ReSharper disable CheckNamespace
+
+
 namespace Sprint.Filter
 // ReSharper restore CheckNamespace
 {
@@ -19,7 +22,7 @@ namespace Sprint.Filter
         private IQueryable<SelectListItem> _dictionary;
         private Func<
              IFilterValue<TProperty?>,
-             Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>,
+             Func<IFilterValue<TProperty?>, LambdaExpressionDecorator<Func<TModel, bool>>>,
              string,
              Object> _expressionBuilder;
         private IFilterValue<TProperty?> _defaultFilterValue;
@@ -122,10 +125,10 @@ namespace Sprint.Filter
                     var selectedCondition = GetCondition(value);
 
                     var expr = _expressionBuilder(value,
-                        _conditionInvoker != null ? (filterValue => _conditionInvoker(selectedCondition.Value, filterValue)) : (Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>)null,                        
+                        _conditionInvoker != null ? (filterValue => new LambdaExpressionDecorator<Func<TModel, bool>>(_conditionInvoker(selectedCondition.Value, filterValue))) : (Func<IFilterValue<TProperty?>, LambdaExpressionDecorator<Func<TModel, bool>>>)null,                        
                         selectedCondition.Key) as Expression<Func<T, bool>>;
 
-                    return expr != null ? expr.Expand() : null;
+                    return expr != null ? expr.Expand().ExpandLambdaExpressionDecorators() : null;
                 }
 
                 if(_conditionInvoker != null)
@@ -208,7 +211,7 @@ namespace Sprint.Filter
 
         public void ConditionBuilder<T>(Func<
              IFilterValue<TProperty?>,
-             Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>,
+             Func<IFilterValue<TProperty?>, LambdaExpressionDecorator<Func<TModel, bool>>>,
              string,
              Expression<Func<T, bool>>> builder)
         {

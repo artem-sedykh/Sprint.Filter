@@ -1,4 +1,7 @@
-﻿// ReSharper disable CheckNamespace
+﻿using Sprint.Helpers;
+// ReSharper disable CheckNamespace
+
+
 namespace Sprint.Filter
 // ReSharper restore CheckNamespace
 {
@@ -95,7 +98,7 @@ namespace Sprint.Filter
         /// <param name="builder">Builder.</param>        
         IValueTypeFilterConfiguration<TModel, TProperty> ConditionBuilder<T>(Func<
              IFilterValue<TProperty?>,
-             Func<IFilterValue<TProperty?>, Expression<Func<TModel, bool>>>,
+             Func<IFilterValue<TProperty?>, LambdaExpressionDecorator<Func<TModel, bool>>>,
              string,
              Expression<Func<T, bool>>> builder);
     }

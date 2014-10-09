@@ -1195,8 +1195,8 @@
         <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.BuildExpressionOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the shim of ReferenceTypeFilter`2.BuildExpression()</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1ExpressionOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
-            <summary>Sets the shim of ReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1LambdaExpressionDecoratorOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
+            <summary>Sets the shim of ReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AdditionalDataSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_AdditionalData()</summary>
@@ -1312,8 +1312,8 @@
         <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.BuildExpressionOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Sprint.Filter.ReferenceTypeFilter{`0,`1},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the shim of ReferenceTypeFilter`2.BuildExpression()</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1ExpressionOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{Sprint.Filter.ReferenceTypeFilter{`0,`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
-            <summary>Sets the shim of ReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1LambdaExpressionDecoratorOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{Sprint.Filter.ReferenceTypeFilter{`0,`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
+            <summary>Sets the shim of ReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.AdditionalDataSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_AdditionalData()</summary>
@@ -1978,8 +1978,8 @@
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.BuildExpressionOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets stubs of BuildExpression()</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1ExpressionOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
-            <summary>Sets stubs of ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1LambdaExpressionDecoratorOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}}})">
+            <summary>Sets stubs of ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ConditionKeyGet">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
@@ -2059,8 +2059,8 @@
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
-            <summary>Sets the stub of IReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
+            <summary>Sets the stub of IReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#Conditions(System.Action{System.Collections.Generic.IDictionary{System.String,Sprint.Filter.IReferenceTypeCondition{`1}}})">
             <summary>Sets the stub of IReferenceTypeFilter`2.Conditions(Action`1&lt;IDictionary`2&lt;String,IReferenceTypeCondition`1&lt;!1&gt;&gt;&gt; conditions)</summary>
@@ -2152,8 +2152,8 @@
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.#ctor">
             <summary>Initializes a new instance of type StubIReferenceTypeFilterConfiguration</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1ExpressionOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}},Sprint.Filter.IReferenceTypeFilterConfiguration{`0,`1}})">
-            <summary>Sets stubs of ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.ConditionBuilderOf1FuncOfIFilterValueOfT1FuncOfIFilterValueOfT1LambdaExpressionDecoratorOfFuncOfT0BooleanStringExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}},Sprint.Filter.IReferenceTypeFilterConfiguration{`0,`1}})">
+            <summary>Sets stubs of ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.ConditionsActionOfIDictionaryOfStringIReferenceTypeConditionOfT1">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.Conditions(Action`1&lt;IDictionary`2&lt;String,IReferenceTypeCondition`1&lt;!1&gt;&gt;&gt; conditions)</summary>
@@ -2191,8 +2191,8 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetValueFormatString">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetValueFormat(String valueFormat)</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
-            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
+            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#Conditions(System.Action{System.Collections.Generic.IDictionary{System.String,Sprint.Filter.IReferenceTypeCondition{`1}}})">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.Conditions(Action`1&lt;IDictionary`2&lt;String,IReferenceTypeCondition`1&lt;!1&gt;&gt;&gt; conditions)</summary>
@@ -2248,6 +2248,9 @@
         <member name="M:Sprint.Helpers.Fakes.ShimExpressionHelper.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
         </member>
+        <member name="M:Sprint.Helpers.Fakes.ShimExpressionHelper.ExpandLambdaExpressionDecoratorsOf1ExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
+            <summary>Sets the shim of ExpressionHelper.ExpandLambdaExpressionDecorators(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; expression)</summary>
+        </member>
         <member name="M:Sprint.Helpers.Fakes.ShimExpressionHelper.IsIntersectionWithBeginOf2ExpressionOfFuncOfM0M1M1``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,``1}},``1,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the shim of ExpressionHelper.IsIntersectionWithBegin(Expression`1&lt;Func`2&lt;!!0,!!1&gt;&gt; firstIntervalEnd, !!1 secondIntervalBegin)</summary>
         </member>
@@ -2256,6 +2259,69 @@
         </member>
         <member name="P:Sprint.Helpers.Fakes.ShimExpressionHelper.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimExpressionHelper.StaticConstructor">
+            <summary>Sets the shim of ExpressionHelper.ExpressionHelper()</summary>
+        </member>
+        <member name="T:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1">
+            <summary>Shim type of Sprint.Helpers.LambdaExpressionDecorator`1</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.#ctor(Sprint.Helpers.LambdaExpressionDecorator{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.ConstructorExpressionOfT0">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.LambdaExpressionDecorator`1(Expression`1&lt;!0&gt; expression)</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.ExpressionGet">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.get_Expression()</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.ExpressionSetExpressionOfT0">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.set_Expression(Expression`1&lt;!0&gt; value)</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.ImplicitOpLambdaExpressionDecoratorOfT0ExpressionOfT0">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.op_Implicit(LambdaExpressionDecorator`1&lt;!0&gt; decorator)</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.ImplicitOpLambdaExpressionDecoratorOfT0T0">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.op_Implicit(LambdaExpressionDecorator`1&lt;!0&gt; decorator)</summary>
+        </member>
+        <member name="T:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.AllInstances.ExpressionGet">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.get_Expression()</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.ShimLambdaExpressionDecorator`1.AllInstances.ExpressionSetExpressionOfT0">
+            <summary>Sets the shim of LambdaExpressionDecorator`1.set_Expression(Expression`1&lt;!0&gt; value)</summary>
+        </member>
+        <member name="T:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1">
+            <summary>Stub type of Sprint.Helpers.LambdaExpressionDecorator`1</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1.#ctor(System.Linq.Expressions.Expression{`0})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1.InitializeStub">
+            <summary>Initializes a new instance of type StubLambdaExpressionDecorator</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Sprint.Helpers.Fakes.StubLambdaExpressionDecorator`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
         </member>
     </members>
 </doc>
