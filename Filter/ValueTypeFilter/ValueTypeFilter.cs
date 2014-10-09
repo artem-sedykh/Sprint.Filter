@@ -137,12 +137,8 @@ namespace Sprint.Filter
 
                     var expr = _conditionInvoker(selectedCondition.Value, GetFilterValue());
 
-                    if(expr != null)
-                    {
-                        expr = expr.Expand();
-
-                        return Expression.Lambda<Func<T, bool>>(expr.Body, expr.Parameters);
-                    }                    
+                    if(expr != null)                                            
+                        return Expression.Lambda<Func<T, bool>>(expr.Body, expr.Parameters);                    
                 }             
             }
 
