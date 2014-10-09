@@ -842,7 +842,7 @@
             <summary>Sets the shim of FilterCollection.&lt;BuildExpression&gt;b__5(IFilter filter)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.ShimFilterCollection._BuildExpressionb__6Of1ExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Boolean})">
-            <summary>Sets the shim of FilterCollection.&lt;BuildExpression&gt;b__6(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; x)</summary>
+            <summary>Sets the shim of FilterCollection.&lt;BuildExpression&gt;b__6(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; expr)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.ShimFilterCollection._BuildExpressionb__7Of1ExpressionOfFuncOfM0BooleanExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the shim of FilterCollection.&lt;BuildExpression&gt;b__7(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; current, Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; expression)</summary>

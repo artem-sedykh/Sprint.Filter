@@ -110,15 +110,37 @@ namespace Sprint.Filter
 
         public Expression<Func<T, bool>> BuildExpression<T>()
         {
-            if (_returnModelType == typeof(T) && _conditionInvoker != null)
+            if (_returnModelType == typeof(T))
             {
-                var selectedCondition = GetCondition();
+                var value = GetFilterValue();
 
-                var expression = (_expressionBuilder != null
-                    ? _expressionBuilder(GetFilterValue(), filterValue => _conditionInvoker(selectedCondition.Value, filterValue), selectedCondition.Key)
-                    : _conditionInvoker(selectedCondition.Value, GetFilterValue())) as Expression<Func<T, bool>>;
+                if(value == null)
+                    return null;
 
-                return expression != null ? expression.Expand() : null;
+                if(_expressionBuilder != null)
+                {
+                    var selectedCondition = GetCondition();
+
+                    var expr = _expressionBuilder(value,
+                        filterValue => _conditionInvoker(selectedCondition.Value, filterValue), 
+                        selectedCondition.Key) as Expression<Func<T, bool>>;
+
+                    return expr != null ? expr.Expand() : null;
+                }
+
+                if(_conditionInvoker != null)
+                {
+                    var selectedCondition = GetCondition();
+
+                    var expr = _conditionInvoker(selectedCondition.Value, GetFilterValue());
+
+                    if(expr != null)
+                    {
+                        expr = expr.Expand();
+
+                        return Expression.Lambda<Func<T, bool>>(expr.Body, expr.Parameters);
+                    }                    
+                }             
             }
 
             return null;
@@ -206,9 +228,7 @@ namespace Sprint.Filter
                 return _filterValue;
 
             var value = (_initFilterValue ?? _defaultFilterValue) ??
-                        (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);
-
-            value = value ?? (new FilterValue<TProperty?> { ConditionKey = _conditions.Keys.FirstOrDefault() });            
+                        (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);            
 
             _filterValue = value;
 

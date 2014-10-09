@@ -61,9 +61,9 @@
 
             var filters = _filters.Values.Where(x => x.ReturnModelType == modelType);
 
-            var expressionList = filters.AsParallel().Select(filter => filter.BuildExpression<TModel>()).ToList();
+            var expressionList = filters.AsParallel().Select(filter => filter.BuildExpression<TModel>()).Where(expr=>expr!=null).ToList();
 
-            var predicate = expressionList.AsParallel().Where(x => x != null).Aggregate<Expression<Func<TModel, bool>>, Expression<Func<TModel, bool>>>(null, (current, expression) => current == null ? expression : current.And(expression));
+            var predicate = expressionList.AsParallel().Aggregate<Expression<Func<TModel, bool>>, Expression<Func<TModel, bool>>>(null, (current, expression) => current == null ? expression : current.And(expression));
 
             return predicate.Expand();
         }

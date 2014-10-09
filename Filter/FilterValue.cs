@@ -13,7 +13,7 @@
         {
             var type = typeof (TModel);
 
-            _typeName = type.IsValueType ? Nullable.GetUnderlyingType(type).FullName : type.FullName;
+            _typeName = (Nullable.GetUnderlyingType(type) ?? type).FullName;
             
             Values = new List<TModel>();
         }
