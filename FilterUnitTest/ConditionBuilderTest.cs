@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
-using LinqKit;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sprint.Filter;
 using Sprint.Filter.Conditions;
+using Sprint.Linq;
 
 namespace FilterUnitTest
 {
