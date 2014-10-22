@@ -1,4 +1,6 @@
-﻿namespace Sprint.Helpers
+﻿using Sprint.Linq;
+
+namespace Sprint.Helpers
 {
     using System;
     using System.Linq.Expressions;
@@ -56,7 +58,7 @@
                         Expression.LessThanOrEqual(expressionFirstIntervalBegin, expressionSecondIntervalBegin),
                         Expression.GreaterThanOrEqual(expressionFirstIntervalEnd, expressionSecondIntervalEnd)));
             //LinqKit fix for EF
-            return LinqKit.Extensions.Expand(Expression.Lambda<Func<TSource, bool>>(expression, parametr));
+            return Expression.Lambda<Func<TSource, bool>>(expression, parametr).Expand();
         }
 
         /// <summary>
@@ -77,7 +79,7 @@
             var expressionFirstIntervalEnd = Expression.Invoke(firstIntervalEnd, parametr);
 
             var expressionSecondIntervalBegin = Expression.Constant(secondIntervalBegin, type);
-            return LinqKit.Extensions.Expand(Expression.Lambda<Func<TSource, bool>>(Expression.GreaterThanOrEqual(expressionFirstIntervalEnd, expressionSecondIntervalBegin), parametr));
+            return Expression.Lambda<Func<TSource, bool>>(Expression.GreaterThanOrEqual(expressionFirstIntervalEnd, expressionSecondIntervalBegin), parametr).Expand();
         }
 
         /// <summary>
@@ -98,7 +100,7 @@
             var expressionFirstIntervalBegin = Expression.Invoke(firstIntervalBegin, parametr);
 
             var expressionSecondIntervalEnd = Expression.Constant(secondIntervalEnd, type);
-            return LinqKit.Extensions.Expand(Expression.Lambda<Func<TSource, bool>>(Expression.LessThanOrEqual(expressionFirstIntervalBegin, expressionSecondIntervalEnd), parametr));
+            return Expression.Lambda<Func<TSource, bool>>(Expression.LessThanOrEqual(expressionFirstIntervalBegin, expressionSecondIntervalEnd), parametr).Expand();
         }
     }
 

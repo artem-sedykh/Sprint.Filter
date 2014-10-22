@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Linq.Expressions;
-    using LinqKit;
+    using System.Linq.Expressions;    
+    using Sprint.Linq;
 
     public class FilterCollection : IFilterCollection
     {
@@ -64,7 +64,7 @@
             var predicate = filters.AsParallel()
                 .Select(filter => filter.BuildExpression<TModel>())
                 .Where(expr => expr != null)
-                .Aggregate<Expression<Func<TModel, bool>>, Expression<Func<TModel, bool>>>(null, (current, expression) => current == null ? expression : current.And(expression));            
+                .Aggregate<Expression<Func<TModel, bool>>, Expression<Func<TModel, bool>>>(null, (current, expression) => current == null ? expression : current.And(expression));
 
             return predicate.Expand();
         }

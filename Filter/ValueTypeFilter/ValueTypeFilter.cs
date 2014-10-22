@@ -9,8 +9,7 @@ namespace Sprint.Filter
     using System.Collections.Generic;
     using System.Linq;
     using System.Linq.Expressions;
-    using System.Web.Mvc;
-    using LinqKit;
+    using System.Web.Mvc;    
 
     public sealed class ValueTypeFilter<TModel,TProperty>:IValueTypeFilter<TModel, TProperty> where TProperty : struct, IComparable, IComparable<TProperty>, IEquatable<TProperty>
     {
