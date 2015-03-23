@@ -41,16 +41,44 @@ namespace Sprint.Filter
             _typeName = typeof (TProperty).FullName;
         }
 
-        string IFilterView.ConditionKey { get { return GetFilterValue().ConditionKey; } }
+        string IFilterView.ConditionKey
+        {
+            get
+            {
+                var value = GetFilterValue();
+                return value != null ? value.ConditionKey : null;                
+            }
+        }
 
-        IEnumerable<object> IFilterView.Values { get { return GetFilterValue().Values.Cast<object>(); } }
+        IEnumerable<object> IFilterView.Values
+        {
+            get
+            {
+                var value = GetFilterValue();
+
+                return value!=null?value.Values.Cast<object>():null;
+            }
+        }
 
         object IFilterView.LeftValue
         {
-            get { return GetFilterValue().LeftValue; }
+            get
+            {
+                var value = GetFilterValue();
+
+                return value != null ? value.LeftValue : null;                
+            }
         }
 
-        object IFilterView.RightValue { get { return GetFilterValue().RightValue; } }
+        object IFilterView.RightValue
+        {
+            get
+            {
+                var value = GetFilterValue();
+
+                return value != null ? value.RightValue : null;                 
+            }
+        }
 
         string IFilterView.TypeName
         {
