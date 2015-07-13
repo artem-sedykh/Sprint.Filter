@@ -12,7 +12,7 @@
         <tags>ASP.NET MVC, Filter, Sprint</tags>
 		    <releaseNotes>Bug fixes</releaseNotes>
       <dependencies>
-        <dependency id="Sprint.Linq" version="1.0.0" />
+        <dependency id="Sprint.Linq" version="1.2.2.0" />
       </dependencies>
     </metadata>	
     <files>

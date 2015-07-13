@@ -35,7 +35,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sprint.Linq">
-      <HintPath>packages\Sprint.Linq.1.0.0.0\lib\net40-full\Sprint.Linq.dll</HintPath>
+      <HintPath>packages\Sprint.Linq.1.2.2.0\lib\net40-full\Sprint.Linq.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
