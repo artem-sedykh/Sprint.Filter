@@ -54,21 +54,14 @@ namespace Sprint.Filter
             _filter.TemplateName = tempaleName;
 
             return this;
-        }
+        }       
 
-        public IValueTypeFilterConfiguration<TModel, TProperty> SetDictionary(Func<IEnumerable<SelectListItem>> dictionary)
+        public IValueTypeFilterConfiguration<TModel, TProperty> SetValueResolver(Func<IFilterValue<TProperty?>, IEnumerable<SelectListItem>> valueResolver)
         {
-            _filter.SetDictionary(dictionary);
+            _filter.SetValueResolver(valueResolver);
 
             return this;
-        }
-
-        public IValueTypeFilterConfiguration<TModel, TProperty> SetDictionary(IQueryable<SelectListItem> dictionary)
-        {
-            _filter.SetDictionary(dictionary);
-
-            return this;
-        }
+        }     
 
         public IValueTypeFilterConfiguration<TModel, TProperty> SetTitle(string title)
         {

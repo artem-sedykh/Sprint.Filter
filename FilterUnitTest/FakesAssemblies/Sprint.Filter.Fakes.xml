@@ -1216,9 +1216,6 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.Constructor">
             <summary>Sets the shim of ReferenceTypeFilter`2.ReferenceTypeFilter`2()</summary>
         </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.DictionarySprintFilterIFilterViewget">
-            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Dictionary()</summary>
-        </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.FilterTypeGet">
             <summary>Sets the shim of ReferenceTypeFilter`2.get_FilterType()</summary>
         </member>
@@ -1258,11 +1255,8 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SetDefaultValueIFilterValueOfT1">
             <summary>Sets the shim of ReferenceTypeFilter`2.SetDefaultValue(IFilterValue`1&lt;!1&gt; filterValue)</summary>
         </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SetDictionaryFuncOfIEnumerableOfSelectListItem">
-            <summary>Sets the shim of ReferenceTypeFilter`2.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SetDictionaryIQueryableOfSelectListItem">
-            <summary>Sets the shim of ReferenceTypeFilter`2.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SetValueResolverFuncOfIFilterValueOfT1IEnumerableOfSelectListItem">
+            <summary>Sets the shim of ReferenceTypeFilter`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SprintFilterIFilterInitIFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilter.Init(IFilterValue value)</summary>
@@ -1290,6 +1284,12 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueFormatSprintFilterIFilterViewsetString">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.set_ValueFormat(String value)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueResolver">
+            <summary>Sets the shim of ReferenceTypeFilter`2.ValueResolver()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueResolverSprintFilterIFilterViewget">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValuesSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Values()</summary>
@@ -1326,9 +1326,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ConditionsActionOfIDictionaryOfStringIReferenceTypeConditionOfT1">
             <summary>Sets the shim of ReferenceTypeFilter`2.Conditions(Action`1&lt;IDictionary`2&lt;String,IReferenceTypeCondition`1&lt;!1&gt;&gt;&gt; conditions)</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.DictionarySprintFilterIFilterViewget">
-            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Dictionary()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.FilterTypeGet">
             <summary>Sets the shim of ReferenceTypeFilter`2.get_FilterType()</summary>
@@ -1369,11 +1366,8 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SetDefaultValueIFilterValueOfT1">
             <summary>Sets the shim of ReferenceTypeFilter`2.SetDefaultValue(IFilterValue`1&lt;!1&gt; filterValue)</summary>
         </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SetDictionaryFuncOfIEnumerableOfSelectListItem">
-            <summary>Sets the shim of ReferenceTypeFilter`2.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SetDictionaryIQueryableOfSelectListItem">
-            <summary>Sets the shim of ReferenceTypeFilter`2.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SetValueResolverFuncOfIFilterValueOfT1IEnumerableOfSelectListItem">
+            <summary>Sets the shim of ReferenceTypeFilter`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SprintFilterIFilterInitIFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilter.Init(IFilterValue value)</summary>
@@ -1401,6 +1395,12 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueFormatSprintFilterIFilterViewsetString">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.set_ValueFormat(String value)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueResolver">
+            <summary>Sets the shim of ReferenceTypeFilter`2.ValueResolver()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueResolverSprintFilterIFilterViewget">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValuesSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Values()</summary>
@@ -1483,9 +1483,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.ConditionKeyGet">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilter.DictionaryGet">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.FilterTypeGet">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
         </member>
@@ -1510,12 +1507,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.RightValueGet">
             <summary>Sets the stub of IFilterView.get_RightValue()</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilter.SetDictionaryFuncOfIEnumerableOfSelectListItem">
-            <summary>Sets the stub of IFilter.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilter.SetDictionaryIQueryableOfSelectListItem">
-            <summary>Sets the stub of IFilter.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
-        </member>
         <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilter#ApplyFilter``1(System.Linq.IQueryable{``0})">
             <summary>Sets the stub of IFilter.ApplyFilter(IQueryable`1&lt;!!0&gt; query)</summary>
         </member>
@@ -1527,12 +1518,6 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilter#Init(Sprint.Filter.IFilterValue)">
             <summary>Sets the stub of IFilter.Init(IFilterValue value)</summary>
-        </member>
-        <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilter#SetDictionary(System.Linq.IQueryable{System.Web.Mvc.SelectListItem})">
-            <summary>Sets the stub of IFilter.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
-        </member>
-        <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilter#SetDictionary(System.Func{System.Collections.Generic.IEnumerable{System.Web.Mvc.SelectListItem}})">
-            <summary>Sets the stub of IFilter.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilter#Visible(System.Boolean)">
             <summary>Sets the stub of IFilter.Visible(Boolean isVisible)</summary>
@@ -1561,6 +1546,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilter.ValueResolverGet">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -1572,9 +1560,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#ConditionKey">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#Dictionary">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
@@ -1602,6 +1587,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#ValueResolver">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
@@ -1822,9 +1810,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.ConditionKeyGet">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilterView.DictionaryGet">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.FilterTypeGet">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
         </member>
@@ -1867,6 +1852,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValueResolverGet">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -1875,9 +1863,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#ConditionKey">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#Dictionary">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
@@ -1902,6 +1887,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#ValueResolver">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
@@ -1987,9 +1975,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ConditionsActionOfIDictionaryOfStringIReferenceTypeConditionOfT1">
             <summary>Sets the stub of IReferenceTypeFilter`2.Conditions(Action`1&lt;IDictionary`2&lt;String,IReferenceTypeCondition`1&lt;!1&gt;&gt;&gt; conditions)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.DictionaryGet">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.FilterTypeGet">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
         </member>
@@ -2029,11 +2014,8 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.SetDefaultValueIFilterValueOfT1">
             <summary>Sets the stub of IReferenceTypeFilter`2.SetDefaultValue(IFilterValue`1&lt;!1&gt; filterValue)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.SetDictionaryFuncOfIEnumerableOfSelectListItem">
-            <summary>Sets the stub of IFilter.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.SetDictionaryIQueryableOfSelectListItem">
-            <summary>Sets the stub of IFilter.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
+        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.SetValueResolverFuncOfIFilterValueOfT1IEnumerableOfSelectListItem">
+            <summary>Sets the stub of IReferenceTypeFilter`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilter#ApplyFilter``1(System.Linq.IQueryable{``0})">
             <summary>Sets the stub of IFilter.ApplyFilter(IQueryable`1&lt;!!0&gt; query)</summary>
@@ -2046,12 +2028,6 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilter#Init(Sprint.Filter.IFilterValue)">
             <summary>Sets the stub of IFilter.Init(IFilterValue value)</summary>
-        </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilter#SetDictionary(System.Linq.IQueryable{System.Web.Mvc.SelectListItem})">
-            <summary>Sets the stub of IFilter.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
-        </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilter#SetDictionary(System.Func{System.Collections.Generic.IEnumerable{System.Web.Mvc.SelectListItem}})">
-            <summary>Sets the stub of IFilter.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilter#Visible(System.Boolean)">
             <summary>Sets the stub of IFilter.Visible(Boolean isVisible)</summary>
@@ -2080,6 +2056,9 @@
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#SetDefaultValue(System.Func{Sprint.Filter.IFilterValue{`1}})">
             <summary>Sets the stub of IReferenceTypeFilter`2.SetDefaultValue(Func`1&lt;IFilterValue`1&lt;!1&gt;&gt; filterValue)</summary>
         </member>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#SetValueResolver(System.Func{Sprint.Filter.IFilterValue{`1},System.Collections.Generic.IEnumerable{System.Web.Mvc.SelectListItem}})">
+            <summary>Sets the stub of IReferenceTypeFilter`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.TemplateNameGet">
             <summary>Sets the stub of IFilterView.get_TemplateName()</summary>
         </member>
@@ -2101,6 +2080,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValueResolverGet">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -2112,9 +2094,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#ConditionKey">
             <summary>Sets the stub of IFilterView.get_ConditionKey()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#Dictionary">
-            <summary>Sets the stub of IFilterView.get_Dictionary()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
@@ -2142,6 +2121,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#ValueResolver">
+            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
@@ -2173,12 +2155,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetDefaultFilterValueIFilterValueOfT1">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDefaultFilterValue(IFilterValue`1&lt;!1&gt; filterValue)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetDictionaryFuncOfIEnumerableOfSelectListItem">
-            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetDictionaryIQueryableOfSelectListItem">
-            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetTemplateString">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetTemplate(String tempaleName)</summary>
         </member>
@@ -2190,6 +2166,9 @@
         </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetValueFormatString">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetValueFormat(String valueFormat)</summary>
+        </member>
+        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.SetValueResolverFuncOfIFilterValueOfT1IEnumerableOfSelectListItem">
+            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>
@@ -2212,12 +2191,6 @@
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetDefaultFilterValue(System.Func{Sprint.Filter.IFilterValue{`1}})">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDefaultFilterValue(Func`1&lt;IFilterValue`1&lt;!1&gt;&gt; filterValue)</summary>
         </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetDictionary(System.Linq.IQueryable{System.Web.Mvc.SelectListItem})">
-            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDictionary(IQueryable`1&lt;SelectListItem&gt; dictionary)</summary>
-        </member>
-        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetDictionary(System.Func{System.Collections.Generic.IEnumerable{System.Web.Mvc.SelectListItem}})">
-            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetDictionary(Func`1&lt;IEnumerable`1&lt;SelectListItem&gt;&gt; dictionary)</summary>
-        </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetTemplate(System.String)">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetTemplate(String tempaleName)</summary>
         </member>
@@ -2229,6 +2202,9 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetValueFormat(System.String)">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetValueFormat(String valueFormat)</summary>
+        </member>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#SetValueResolver(System.Func{Sprint.Filter.IFilterValue{`1},System.Collections.Generic.IEnumerable{System.Web.Mvc.SelectListItem}})">
+            <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.SetValueResolver(Func`2&lt;IFilterValue`1&lt;!1&gt;,IEnumerable`1&lt;SelectListItem&gt;&gt; valueResolver)</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilterConfiguration`2.sf::Sprint#Filter#IReferenceTypeFilterConfiguration{TModel@TProperty}#Visible(System.Boolean)">
             <summary>Sets the stub of IReferenceTypeFilterConfiguration`2.Visible(Boolean isVisible)</summary>

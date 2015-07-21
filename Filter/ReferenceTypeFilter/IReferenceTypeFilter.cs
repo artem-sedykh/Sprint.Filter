@@ -1,13 +1,11 @@
-﻿using Sprint.Helpers;
-// ReSharper disable CheckNamespace
-
-
+﻿// ReSharper disable CheckNamespace
 namespace Sprint.Filter
-// ReSharper restore CheckNamespace
 {
     using System;
     using System.Collections.Generic;
     using System.Linq.Expressions;
+    using System.Web.Mvc;
+    using Helpers;
 
     public interface IReferenceTypeFilter<TModel, TProperty> : IFilter where TProperty : class, IComparable, IComparable<TProperty>, IEquatable<TProperty>
     {
@@ -28,5 +26,7 @@ namespace Sprint.Filter
         void SetDefaultValue(IFilterValue<TProperty> filterValue);
 
         void Init(IFilterValue<TProperty> filterValue);
+
+        void SetValueResolver(Func<IFilterValue<TProperty>, IEnumerable<SelectListItem>> valueResolver);
     }
 }

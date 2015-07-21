@@ -1,6 +1,5 @@
 ﻿// ReSharper disable CheckNamespace
 namespace Sprint.Filter
-// ReSharper restore CheckNamespace
 {
     using System;
     using System.Linq.Expressions;

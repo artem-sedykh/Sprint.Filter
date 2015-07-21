@@ -42,19 +42,9 @@ namespace Sprint.Filter
         /// Set filter template.
         /// </summary>
         /// <param name="tempaleName">Template name.</param>        
-        IValueTypeFilterConfiguration<TModel, TProperty> SetTemplate(string tempaleName);
+        IValueTypeFilterConfiguration<TModel, TProperty> SetTemplate(string tempaleName);     
 
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        /// <param name="dictionary">Available filter values.</param>        
-        IValueTypeFilterConfiguration<TModel, TProperty> SetDictionary(Func<IEnumerable<SelectListItem>> dictionary);
-
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        /// <param name="dictionary">Available filter values.</param>        
-        IValueTypeFilterConfiguration<TModel, TProperty> SetDictionary(IQueryable<SelectListItem> dictionary);
+        IValueTypeFilterConfiguration<TModel, TProperty> SetValueResolver(Func<IFilterValue<TProperty?>, IEnumerable<SelectListItem>> valueResolver);
 
         /// <summary>
         /// Set filter display name.

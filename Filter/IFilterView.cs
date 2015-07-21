@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Web.Mvc;
+    using System;
 
     public interface IFilterView
     {
@@ -15,10 +16,7 @@
         /// </summary>
         string TemplateName { get; set; }
 
-        /// <summary>
-        /// Dictionary of available values
-        /// </summary>
-        IEnumerable<SelectListItem> Dictionary { get; }
+        Func<IEnumerable<SelectListItem>> ValueResolver { get; }
 
         /// <summary>
         /// list of conditions
@@ -70,6 +68,6 @@
         /// <summary>
         /// Display value format
         /// </summary>
-        string ValueFormat { get; set; }
+        string ValueFormat { get; set; }        
     }
 }

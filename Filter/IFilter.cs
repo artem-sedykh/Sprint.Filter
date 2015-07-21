@@ -3,8 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Linq.Expressions;
-    using System.Web.Mvc;
+    using System.Linq.Expressions;    
 
     public interface IFilter : IFilterView
     {
@@ -29,17 +28,7 @@
         /// </summary>
         /// <typeparam name="TModel">Type.</typeparam>
         /// <returns>Expression tree.</returns>
-        Expression<Func<TModel, bool>> BuildExpression<TModel>();
-
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        void SetDictionary(Func<IEnumerable<SelectListItem>> dictionary);
-
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        void SetDictionary(IQueryable<SelectListItem> dictionary);
+        Expression<Func<TModel, bool>> BuildExpression<TModel>();                
 
         /// <summary>
         /// hide/show filter.

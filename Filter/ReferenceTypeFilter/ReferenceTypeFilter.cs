@@ -1,15 +1,12 @@
-﻿using Sprint.Helpers;
-// ReSharper disable CheckNamespace
-
-
+﻿// ReSharper disable CheckNamespace
 namespace Sprint.Filter
-// ReSharper restore CheckNamespace
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Linq.Expressions;
-    using System.Web.Mvc;    
+    using System.Web.Mvc;
+    using Helpers;
 
     public sealed class ReferenceTypeFilter<TModel,TProperty>:IReferenceTypeFilter<TModel, TProperty> where TProperty : class, IComparable, IComparable<TProperty>, IEquatable<TProperty>
     {
@@ -17,8 +14,6 @@ namespace Sprint.Filter
         private bool _isVisible;
         private Type _returnModelType;
         private readonly string _typeName;
-        private Lazy<IEnumerable<SelectListItem>> _lazyDictionary;
-        private IQueryable<SelectListItem> _dictionary;
         private Func<IFilterValue<TProperty>,
             Func<IFilterValue<TProperty>, LambdaExpressionDecorator<Func<TModel, bool>>>,
             string, object> _expressionBuilder;
@@ -26,7 +21,7 @@ namespace Sprint.Filter
         private IFilterValue<TProperty> _defaultFilterValue;
         private IFilterValue<TProperty> _initFilterValue;
         private Lazy<IFilterValue<TProperty>> _defaultLazyFilterValue;
-
+        private Func<IFilterValue<TProperty>, IEnumerable<SelectListItem>> _valueResolver;
         private Func<IReferenceTypeCondition<TProperty>, IFilterValue<TProperty>, Expression<Func<TModel, bool>>> _conditionInvoker;
 
         private IFilterValue<TProperty> _filterValue;
@@ -92,9 +87,9 @@ namespace Sprint.Filter
 
         string IFilterView.TemplateName { get; set; }
 
-        IEnumerable<SelectListItem> IFilterView.Dictionary
+        Func<IEnumerable<SelectListItem>> IFilterView.ValueResolver
         {
-            get { return _dictionary ?? (_lazyDictionary != null ? _lazyDictionary.Value : null); }
+            get { return ValueResolver; }
         }
 
         IEnumerable<SelectListItem> IFilterView.GetConditions()
@@ -118,6 +113,11 @@ namespace Sprint.Filter
             if (value == null) return;
 
             _initFilterValue = value;            
+        }
+
+        public void SetValueResolver(Func<IFilterValue<TProperty>, IEnumerable<SelectListItem>> valueResolver)
+        {
+            _valueResolver = valueResolver;
         }
 
         void IFilter.Init(IFilterValue value)
@@ -185,17 +185,7 @@ namespace Sprint.Filter
             _filterValue = null;
 
             _defaultFilterValue = filterValue;
-        }
-
-        public void SetDictionary(Func<IEnumerable<SelectListItem>> dictionary)
-        {
-            _lazyDictionary = new Lazy<IEnumerable<SelectListItem>>(dictionary);
-        }
-
-        public void SetDictionary(IQueryable<SelectListItem> dictionary)
-        {
-            _dictionary = dictionary;
-        }
+        }      
 
         public void Visible(bool isVisible)
         {
@@ -267,6 +257,16 @@ namespace Sprint.Filter
         private KeyValuePair<string, IReferenceTypeCondition<TProperty>> GetCondition(IFilterValue filterValue)
         {            
             return _conditions.FirstOrDefault(x => x.Key == filterValue.ConditionKey);
-        } 
+        }
+
+        private IEnumerable<SelectListItem> ValueResolver()
+        {
+            if (_valueResolver == null)
+                return null;
+
+            var value = GetFilterValue();
+
+            return _valueResolver(value);
+        }
     }
 }

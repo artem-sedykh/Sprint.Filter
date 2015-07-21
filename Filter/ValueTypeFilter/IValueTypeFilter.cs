@@ -1,4 +1,5 @@
-﻿using Sprint.Helpers;
+﻿using System.Web.Mvc;
+using Sprint.Helpers;
 // ReSharper disable CheckNamespace
 
 
@@ -25,8 +26,10 @@ namespace Sprint.Filter
 
         void SetDefaultValue(Func<IFilterValue<TProperty?>> filterValue);
 
-        void SetDefaultValue(IFilterValue<TProperty?> filterValue);
+        void SetDefaultValue(IFilterValue<TProperty?> filterValue);        
 
         void Init(IFilterValue<TProperty?> filterValue);
+
+        void SetValueResolver(Func<IFilterValue<TProperty?>, IEnumerable<SelectListItem>> dictionary);
     }
 }

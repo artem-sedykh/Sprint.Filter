@@ -1,13 +1,9 @@
-﻿using Sprint.Helpers;
-// ReSharper disable CheckNamespace
-
-
+﻿// ReSharper disable CheckNamespace
 namespace Sprint.Filter
-// ReSharper restore CheckNamespace
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
+    using System.Collections.Generic;    
+    using Helpers;
     using System.Web.Mvc;
     using System.Linq.Expressions;
 
@@ -44,17 +40,7 @@ namespace Sprint.Filter
         /// <param name="tempaleName">Template name.</param>   
         IReferenceTypeFilterConfiguration<TModel, TProperty> SetTemplate(string tempaleName);
 
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        /// <param name="dictionary">Available filter values.</param>   
-        IReferenceTypeFilterConfiguration<TModel, TProperty> SetDictionary(Func<IEnumerable<SelectListItem>> dictionary);
-
-        /// <summary>
-        /// Set dictionary of available values.
-        /// </summary>
-        /// <param name="dictionary">Available filter values.</param>   
-        IReferenceTypeFilterConfiguration<TModel, TProperty> SetDictionary(IQueryable<SelectListItem> dictionary);
+        IReferenceTypeFilterConfiguration<TModel, TProperty> SetValueResolver(Func<IFilterValue<TProperty>, IEnumerable<SelectListItem>> valueResolver);
 
         /// <summary>
         /// Set filter display name.
