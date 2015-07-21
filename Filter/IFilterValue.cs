@@ -23,6 +23,6 @@
 
         new TModel LeftValue { get; }
 
-        new TModel RightValue { get; }
+        new TModel RightValue { get; }        
     }
 }

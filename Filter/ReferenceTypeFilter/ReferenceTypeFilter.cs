@@ -254,6 +254,18 @@ namespace Sprint.Filter
             return value;
         }
 
+        bool IFilterView.HasChanged()
+        {
+            var filterValue = GetFilterValue();
+
+            if (filterValue == null)
+                return false;
+
+            var defaultValue = _defaultFilterValue ?? (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);
+
+            return filterValue.Equals(defaultValue);
+        }
+
         private KeyValuePair<string, IReferenceTypeCondition<TProperty>> GetCondition(IFilterValue filterValue)
         {            
             return _conditions.FirstOrDefault(x => x.Key == filterValue.ConditionKey);

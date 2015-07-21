@@ -413,6 +413,6 @@ namespace FilterUnitTest
             Assert.IsTrue(expr4Func(new TestIsIntersectionConditionSource { Begin = 0, End = 10 }));
             Assert.IsFalse(expr4Func(new TestIsIntersectionConditionSource { Begin = 16, End = 20 }));
 
-        }
+        }        
     }
 }

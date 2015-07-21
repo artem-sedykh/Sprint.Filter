@@ -81,7 +81,7 @@ namespace Sprint.Filter
             get { return _typeName; }            
         }
 
-        string IFilterView.ValueFormat { get; set; }      
+        string IFilterView.ValueFormat { get; set; }     
 
         string IFilterView.Title { get; set; }
 
@@ -251,6 +251,18 @@ namespace Sprint.Filter
             _filterValue = value;
 
             return value;
+        }
+
+        bool IFilterView.HasChanged()
+        {
+            var filterValue = GetFilterValue();
+
+            if (filterValue == null)
+                return false;
+
+            var defaultValue = _defaultFilterValue ?? (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);
+
+            return filterValue.Equals(defaultValue);
         }
 
         private KeyValuePair<string, IValueTypeCondition<TProperty>> GetCondition(IFilterValue filterValue)

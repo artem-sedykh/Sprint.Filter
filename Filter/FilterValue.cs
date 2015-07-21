@@ -6,7 +6,20 @@
 
     [Serializable]
     public sealed class FilterValue<TModel> : IFilterValue<TModel>
-    {
+    {      
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (_typeName != null ? _typeName.GetHashCode() : 0);
+                hashCode = (hashCode*397) ^ (ConditionKey != null ? ConditionKey.GetHashCode() : 0);
+                hashCode = (hashCode*397) ^ (Values != null ? Values.GetHashCode() : 0);
+                hashCode = (hashCode*397) ^ EqualityComparer<TModel>.Default.GetHashCode(LeftValue);
+                hashCode = (hashCode*397) ^ EqualityComparer<TModel>.Default.GetHashCode(RightValue);
+                return hashCode;
+            }
+        }
+
         private readonly string _typeName;
 
         public FilterValue()
@@ -44,5 +57,33 @@
         {
             get { return RightValue; }
         }
+
+        public override bool Equals(object obj)
+        {
+            var filterValue = obj as FilterValue<TModel>;
+
+            return filterValue != null && Equals(filterValue);
+        }
+
+        public bool Equals(FilterValue<TModel> filterValue)
+        {
+            if (filterValue == null)
+                return false;
+
+            if ((filterValue.Values == null && Values != null) || (filterValue.Values != null && Values == null))
+                return false;
+
+            var equal = TypeName == filterValue.TypeName
+                        && ConditionKey == filterValue.ConditionKey
+                        && LeftValue.Equals(filterValue.LeftValue)
+                        && RightValue.Equals(filterValue.RightValue);
+
+
+            if (filterValue.Values != null && Values != null)
+                equal = equal && Values.SequenceEqual(filterValue.Values);
+
+            return equal;
+        }
+
     }
 }

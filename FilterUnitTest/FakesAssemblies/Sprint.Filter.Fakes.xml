@@ -1051,6 +1051,15 @@
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.Constructor">
             <summary>Sets the shim of FilterValue`1.FilterValue`1()</summary>
         </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.EqualsFilterValueOfT0">
+            <summary>Sets the shim of FilterValue`1.Equals(FilterValue`1&lt;!0&gt; filterValue)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.EqualsObject">
+            <summary>Sets the shim of FilterValue`1.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.GetHashCode">
+            <summary>Sets the shim of FilterValue`1.GetHashCode()</summary>
+        </member>
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.LeftValueGet">
             <summary>Sets the shim of FilterValue`1.get_LeftValue()</summary>
         </member>
@@ -1089,6 +1098,15 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.AllInstances.ConditionKeySetString">
             <summary>Sets the shim of FilterValue`1.set_ConditionKey(String value)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.AllInstances.EqualsFilterValueOfT0">
+            <summary>Sets the shim of FilterValue`1.Equals(FilterValue`1&lt;!0&gt; filterValue)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.AllInstances.EqualsObject">
+            <summary>Sets the shim of FilterValue`1.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.AllInstances.GetHashCode01">
+            <summary>Sets the shim of FilterValue`1.GetHashCode()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.AllInstances.LeftValueGet">
             <summary>Sets the shim of FilterValue`1.get_LeftValue()</summary>
@@ -1264,6 +1282,9 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SprintFilterIFilterViewGetConditions">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.GetConditions()</summary>
         </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.SprintFilterIFilterViewHasChanged">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.HasChanged()</summary>
+        </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.TemplateNameSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_TemplateName()</summary>
         </member>
@@ -1374,6 +1395,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SprintFilterIFilterViewGetConditions">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.GetConditions()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.SprintFilterIFilterViewHasChanged">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.HasChanged()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.TemplateNameSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_TemplateName()</summary>
@@ -1492,6 +1516,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilter.HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.InitIFilterValue">
             <summary>Sets the stub of IFilter.Init(IFilterValue value)</summary>
         </member>
@@ -1524,6 +1551,9 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
+        </member>
+        <member name="M:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.TemplateNameGet">
             <summary>Sets the stub of IFilterView.get_TemplateName()</summary>
@@ -1819,6 +1849,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilterView.HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.IsVisibleGet">
             <summary>Sets the stub of IFilterView.get_IsVisible()</summary>
         </member>
@@ -1830,6 +1863,9 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
+        </member>
+        <member name="M:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.TemplateNameGet">
             <summary>Sets the stub of IFilterView.get_TemplateName()</summary>
@@ -1990,6 +2026,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.InitIFilterValue">
             <summary>Sets the stub of IFilter.Init(IFilterValue value)</summary>
         </member>
@@ -2034,6 +2073,9 @@
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
+        </member>
+        <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#HasChanged">
+            <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
         <member name="M:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IReferenceTypeFilter{TModel@TProperty}#ConditionBuilder``1(System.Func{Sprint.Filter.IFilterValue{`1},System.Func{Sprint.Filter.IFilterValue{`1},Sprint.Helpers.LambdaExpressionDecorator{System.Func{`0,System.Boolean}}},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}})">
             <summary>Sets the stub of IReferenceTypeFilter`2.ConditionBuilder(Func`4&lt;IFilterValue`1&lt;!1&gt;,Func`2&lt;IFilterValue`1&lt;!1&gt;,LambdaExpressionDecorator`1&lt;Func`2&lt;!0,Boolean&gt;&gt;&gt;,String,Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt;&gt; builder)</summary>

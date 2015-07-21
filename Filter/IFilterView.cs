@@ -68,6 +68,8 @@
         /// <summary>
         /// Display value format
         /// </summary>
-        string ValueFormat { get; set; }        
+        string ValueFormat { get; set; }
+
+        bool HasChanged();
     }
 }

@@ -59,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FilterValueEqualTest.cs" />
     <Compile Include="FilterValueModelBinderTest.cs" />
     <Compile Include="InitFilterTest.cs" />
     <Compile Include="Model\Category.cs" />
