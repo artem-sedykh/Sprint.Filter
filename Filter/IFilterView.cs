@@ -16,7 +16,7 @@
         /// </summary>
         string TemplateName { get; set; }
 
-        Func<IEnumerable<SelectListItem>> ValueResolver { get; }
+        Func<IEnumerable<SelectListItem>> GetValues { get; }
 
         /// <summary>
         /// list of conditions

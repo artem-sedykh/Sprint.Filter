@@ -1252,6 +1252,12 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.GetFilterValue()</summary>
         </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetValues">
+            <summary>Sets the shim of ReferenceTypeFilter`2.GetValues()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.GetValuesSprintFilterIFilterViewget">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_GetValues()</summary>
+        </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.InitIFilterValueOfT1">
             <summary>Sets the shim of ReferenceTypeFilter`2.Init(IFilterValue`1&lt;!1&gt; value)</summary>
         </member>
@@ -1305,12 +1311,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueFormatSprintFilterIFilterViewsetString">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.set_ValueFormat(String value)</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueResolver">
-            <summary>Sets the shim of ReferenceTypeFilter`2.ValueResolver()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValueResolverSprintFilterIFilterViewget">
-            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.ValuesSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Values()</summary>
@@ -1366,6 +1366,12 @@
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetFilterValue">
             <summary>Sets the shim of ReferenceTypeFilter`2.GetFilterValue()</summary>
         </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetValues">
+            <summary>Sets the shim of ReferenceTypeFilter`2.GetValues()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.GetValuesSprintFilterIFilterViewget">
+            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_GetValues()</summary>
+        </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.InitIFilterValueOfT1">
             <summary>Sets the shim of ReferenceTypeFilter`2.Init(IFilterValue`1&lt;!1&gt; value)</summary>
         </member>
@@ -1419,12 +1425,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueFormatSprintFilterIFilterViewsetString">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.set_ValueFormat(String value)</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueResolver">
-            <summary>Sets the shim of ReferenceTypeFilter`2.ValueResolver()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValueResolverSprintFilterIFilterViewget">
-            <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.ShimReferenceTypeFilter`2.AllInstances.ValuesSprintFilterIFilterViewget">
             <summary>Sets the shim of ReferenceTypeFilter`2.Sprint.Filter.IFilterView.get_Values()</summary>
@@ -1516,6 +1516,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilter.GetValuesGet">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.HasChanged">
             <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
@@ -1576,9 +1579,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilter.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilter.ValueResolverGet">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilter.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -1593,6 +1593,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#GetValues">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#IsVisible">
             <summary>Sets the stub of IFilterView.get_IsVisible()</summary>
@@ -1617,9 +1620,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#ValueResolver">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilter.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
@@ -1849,6 +1849,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIFilterView.GetValuesGet">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.HasChanged">
             <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
@@ -1888,9 +1891,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValueResolverGet">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIFilterView.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -1902,6 +1902,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#GetValues">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#IsVisible">
             <summary>Sets the stub of IFilterView.get_IsVisible()</summary>
@@ -1923,9 +1926,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#ValueResolver">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIFilterView.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
@@ -2026,6 +2026,9 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.GetConditions">
             <summary>Sets the stub of IFilterView.GetConditions()</summary>
         </member>
+        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.GetValuesGet">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
+        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.HasChanged">
             <summary>Sets the stub of IFilterView.HasChanged()</summary>
         </member>
@@ -2122,9 +2125,6 @@
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValueFormatSetString">
             <summary>Sets the stub of IFilterView.set_ValueFormat(String value)</summary>
         </member>
-        <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValueResolverGet">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
-        </member>
         <member name="F:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.ValuesGet">
             <summary>Sets the stub of IFilterView.get_Values()</summary>
         </member>
@@ -2139,6 +2139,9 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#FilterType">
             <summary>Sets the stub of IFilterView.get_FilterType()</summary>
+        </member>
+        <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#GetValues">
+            <summary>Sets the stub of IFilterView.get_GetValues()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#IsVisible">
             <summary>Sets the stub of IFilterView.get_IsVisible()</summary>
@@ -2163,9 +2166,6 @@
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#ValueFormat">
             <summary>Sets the stub of IFilterView.get_ValueFormat()</summary>
-        </member>
-        <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#ValueResolver">
-            <summary>Sets the stub of IFilterView.get_ValueResolver()</summary>
         </member>
         <member name="P:Sprint.Filter.Fakes.StubIReferenceTypeFilter`2.sf::Sprint#Filter#IFilterView#Values">
             <summary>Sets the stub of IFilterView.get_Values()</summary>

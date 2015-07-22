@@ -87,9 +87,9 @@ namespace Sprint.Filter
 
         string IFilterView.TemplateName { get; set; }
 
-        Func<IEnumerable<SelectListItem>> IFilterView.ValueResolver
+        Func<IEnumerable<SelectListItem>> IFilterView.GetValues
         {
-            get { return ValueResolver; }
+            get { return GetValues; }
         }
 
         IEnumerable<SelectListItem> IFilterView.GetConditions()
@@ -262,7 +262,7 @@ namespace Sprint.Filter
 
             var defaultValue = _defaultFilterValue ?? (_defaultLazyFilterValue != null ? _defaultLazyFilterValue.Value : null);
 
-            return filterValue.Equals(defaultValue);
+            return !filterValue.Equals(defaultValue);
         }
 
         private KeyValuePair<string, IValueTypeCondition<TProperty>> GetCondition(IFilterValue filterValue)
@@ -270,7 +270,7 @@ namespace Sprint.Filter
             return _conditions.FirstOrDefault(x => x.Key == filterValue.ConditionKey);
         }
 
-        private IEnumerable<SelectListItem> ValueResolver()
+        private IEnumerable<SelectListItem> GetValues()
         {
             if (_valueResolver == null)
                 return null;
