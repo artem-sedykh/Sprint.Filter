@@ -1051,6 +1051,9 @@
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.Constructor">
             <summary>Sets the shim of FilterValue`1.FilterValue`1()</summary>
         </member>
+        <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.EqualPropertyT0T0">
+            <summary>Sets the shim of FilterValue`1.EqualProperty(!0 property1, !0 property2)</summary>
+        </member>
         <member name="P:Sprint.Filter.Fakes.ShimFilterValue`1.EqualsFilterValueOfT0">
             <summary>Sets the shim of FilterValue`1.Equals(FilterValue`1&lt;!0&gt; filterValue)</summary>
         </member>

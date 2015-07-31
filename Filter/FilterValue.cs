@@ -75,14 +75,22 @@
 
             var equal = TypeName == filterValue.TypeName
                         && ConditionKey == filterValue.ConditionKey
-                        && LeftValue.Equals(filterValue.LeftValue)
-                        && RightValue.Equals(filterValue.RightValue);
+                        && EqualProperty(LeftValue, filterValue.LeftValue)
+                        && EqualProperty(RightValue, filterValue.RightValue);
 
 
             if (filterValue.Values != null && Values != null)
                 equal = equal && Values.SequenceEqual(filterValue.Values);
 
             return equal;
+        }
+
+        public static bool EqualProperty(TModel property1, TModel property2)
+        {            
+            if ((property1 == null && property2 != null) || (property2 == null && property1 != null))
+                return false;
+
+            return (property1 == null && property2 == null) || property1.Equals(property2);
         }
 
     }
