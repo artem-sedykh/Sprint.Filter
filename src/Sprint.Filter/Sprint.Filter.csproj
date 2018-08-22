@@ -11,6 +11,7 @@
     <Authors>Artem Sedykh</Authors>
     <Company>Sprint.Filter</Company>
     <Version>3.2.4</Version>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/artem-sedykh/Sprint.Filter/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
