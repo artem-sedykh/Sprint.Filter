@@ -1,4 +1,7 @@
 # Sprint.Filter [![NuGet](https://img.shields.io/nuget/v/Sprint.Filter.svg)](https://www.nuget.org/packages/Sprint.Filter/) [![Downloads](https://img.shields.io/nuget/dt/Sprint.Filter.svg)](https://www.nuget.org/packages/Sprint.Filter/)
+# Status
+[![Build status](https://ci.appveyor.com/api/projects/status/bn7lhopm5j16ucrc?svg=true
+)](https://ci.appveyor.com/project/artem-sedykh/sprint-filter/branch/release)
 
 ## What is this?
 
