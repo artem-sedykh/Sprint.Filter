@@ -1,4 +1,4 @@
-# Sprint.Filter
+# Sprint.Filter [![NuGet](https://img.shields.io/nuget/v/Sprint.Filter.svg)](https://www.nuget.org/packages/Sprint.Filter/) [![Downloads](https://img.shields.io/nuget/dt/Sprint.Filter.svg)](https://www.nuget.org/packages/Sprint.Filter/)
 
 ## What is this?
 
@@ -73,7 +73,7 @@ public ActionResult Filter(ActionGridOptions options, IMvcPrincipal user)
     var searchString = options != null ? options.SearchString : null;
 }
 <div class="fast-filter-wrap">
-    <input type="text" class="search" placeholder="Ïîèñê" data-update-grid="@Model.UpdateTargetId" value="@searchString" />
+    <input type="text" class="search" placeholder="ÃÃ®Ã¨Ã±Ãª" data-update-grid="@Model.UpdateTargetId" value="@searchString" />
     <div class="filter-panel">
         <table>
             <tr>
